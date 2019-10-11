@@ -4,7 +4,7 @@ categories:
   - MyDefaultCategory
 tags:
   - MyDefaultTag
-mathjax: false
+mathjax: true
 toc: false
 date: 2019-10-11 18:45:54
 ---
@@ -33,3 +33,27 @@ omit
 <%- partial('mathjax') %>
 <% } %>
 ```
+
+* 杂  
+`npm install mathjax --save`
+[mathjax - npm](https://www.npmjs.com/package/mathjax)。  
+[](https://github.com/mathjax/MathJax-src/archive/master.zip)。  
+[](https://github.com/mathjax/MathJax/archive/master.zip)。  
+
+* mathjax  
+**[在线 Markdown MathJax 编辑器](https://kerzol.github.io/markdown-mathjax/editor.html)**。  
+[MathJax Documentation — MathJax 3.0 documentation](http://docs.mathjax.org/en/latest/index.html)。  
+[MathJax 中文文档 — MathJax Chinese Doc 2.0 documentation](https://mathjax-chinese-doc.readthedocs.io/en/latest/)。  
+[maths-symbols.pdf](http://mirrors.sjtug.sjtu.edu.cn/ctan/info/symbols/math/maths-symbols.pdf)。  
+[Markdown MathJax 公式](https://www.rdtoc.com/tutorial/markdown-mathjax-tutorial.html)。  
+[Markdown LaTeX 数学符号速查表](https://www.rdtoc.com/tutorial/markdown-latex-tutorial.html)。  
+
+* 数学公式示例  
+$ E = mc^2 $  
+$ V = \frac{4}{3} \pi R^3 $  
+$$ log _a (M \bullet N) = log _a M + log _a N $$  
+$$ log _a \frac{M}{N} = log _a M - log _a N $$  
+$$ log _a M^n = n log _a M $$  
+$$ log _{a^n} M = \frac{1}{n} log _a M $$  
+$$ log _a b = \frac{log _c b}{log _c a} $$  
+$$ log _a b = \frac{1}{log _b a} $$  
