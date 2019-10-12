@@ -33,7 +33,6 @@ omit
 #### 创建mathjax.ejs文件  
 创建`themes/landscape/layout/_partial/mathjax.ejs`文件，其内容如下：
 ```html
-<!-- https://github.com/mathjax/MathJax-docs/blob/v2.7-latest/start.rst -->
 <!-- https://github.com/xiangming/landscape-plus/blob/master/layout/_partial/mathjax.ejs -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -81,24 +80,27 @@ MathJax.Hub.Queue(function() {
 ```
 
 ## 其他  
+可能用到的一些东西。  
 
-#### 源码相关  
+#### 源码和配置相关  
 保持默认的`hexo-renderer-marked`就行，无需更换到`hexo-renderer-kramed`。  
 执行`npm install mathjax --save`将会生成`./node_modules/mathjax`文件夹。  
 [mathjax - npm](https://www.npmjs.com/package/mathjax)。  
 [mathjax/MathJax-src: MathJax source code for version 3 and beyond](https://github.com/mathjax/MathJax-src)。  
-[mathjax/MathJax: Beautiful math in all browsers](https://github.com/mathjax/MathJax)。  
-
-#### 书写公式  
-荐：[在线 Markdown MathJax 编辑器](https://kerzol.github.io/markdown-mathjax/editor.html)。  
-荐：[CSDN-markdown语法之如何使用LaTeX语法编写数学公式](https://blog.csdn.net/lanxuezaipiao/article/details/44341645)。  
 [MathJax Documentation — MathJax 3.0 documentation](http://docs.mathjax.org/en/latest/index.html)。  
+[MathJax-2.7.6.zip](https://github.com/mathjax/MathJax/archive/2.7.6.zip)。  
+[mathjax/MathJax: Beautiful math in all browsers](https://github.com/mathjax/MathJax)。  
 [MathJax 中文文档 — MathJax Chinese Doc 2.0 documentation](https://mathjax-chinese-doc.readthedocs.io/en/latest/)。  
-[maths-symbols.pdf](http://mirrors.sjtug.sjtu.edu.cn/ctan/info/symbols/math/maths-symbols.pdf)。  
-[Markdown MathJax 公式](https://www.rdtoc.com/tutorial/markdown-mathjax-tutorial.html)。  
-[Markdown LaTeX 数学符号速查表](https://www.rdtoc.com/tutorial/markdown-latex-tutorial.html)。  
-[CSDN Markdown简明教程3-表格和公式](https://blog.csdn.net/whqet/article/details/44277965)。  
+[MathJax-docs/start.rst at v2.7-latest](https://github.com/mathjax/MathJax-docs/blob/v2.7-latest/start.rst)。  
+
+#### 公式编写指南  
+[在线 Markdown MathJax 编辑器](https://kerzol.github.io/markdown-mathjax/editor.html)。  
+[CSDN-markdown语法之如何使用LaTeX语法编写数学公式](https://blog.csdn.net/lanxuezaipiao/article/details/44341645)。  
 [在Hexo中渲染MathJax数学公式](https://www.cnblogs.com/wangxin37/p/8185688.html)。  
+[Markdown LaTeX 数学符号速查表](https://www.rdtoc.com/tutorial/markdown-latex-tutorial.html)。  
+[Markdown MathJax 公式](https://www.rdtoc.com/tutorial/markdown-mathjax-tutorial.html)。  
+[CSDN Markdown简明教程3-表格和公式](https://blog.csdn.net/whqet/article/details/44277965)。  
+[maths-symbols.pdf](http://mirrors.sjtug.sjtu.edu.cn/ctan/info/symbols/math/maths-symbols.pdf)。  
 
 #### 数学公式示例  
 $ E = mc^2 $  
