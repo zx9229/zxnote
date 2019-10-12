@@ -60,7 +60,7 @@ MathJax.Hub.Queue(function() {
 ```
 
 #### 启用mathjax  
-如果"hexo的_config.yml"或"当前theme的_config.yml"配置了`mathjax: true`，并且"page has `mathjax: true` in Front-matter"，那么便启用mathjax了。  
+如果"hexo的_config.yml"配置了mathjax的enable为真，并且"page has `mathjax: true` in Front-matter"，那么便启用mathjax了。  
 
 ## 思路  
 无意间看到了主题`landscape-plus`：针对中国大陆的hexo用户，优化hexo官方主题landscape。新增mathjax模块。  
