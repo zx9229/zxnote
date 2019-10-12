@@ -21,10 +21,10 @@
   <%- js('fancybox/jquery.fancybox.pack') %>
 <% } %>
 
-<!--如果"hexo的_config.yml"或"theme的_config.yml"配置了`mathjax: true`
+<!--如果"hexo的_config.yml"配置了mathjax的enable为真
     并且"page has `mathjax: true` in Front-matter"
     那么使用"mathjax.ejs"-->
-<% if (((config.mathjax || theme.mathjax) && page.mathjax)){ %>
+<% if (config.mathjax && config.mathjax.enable && page.mathjax){ %>
 <%- partial('mathjax') %>
 <% } %>
 

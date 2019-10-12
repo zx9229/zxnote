@@ -17,5 +17,8 @@ MathJax.Hub.Queue(function() {
   }
 });
 </script>
-<!--script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"-->
-   <script type="text/javascript" src= "<%- url_for() %>/MathJax-2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<% if (config.mathjax && config.mathjax.local){ %>
+  <script type="text/javascript" src= "<%- url_for() %>/MathJax-2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<% } else { %>
+  <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<% } %>

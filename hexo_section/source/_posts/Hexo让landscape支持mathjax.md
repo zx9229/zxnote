@@ -22,10 +22,10 @@ omit
 #### 修改after-footer.ejs文件  
 修改`themes/landscape/layout/_partial/after-footer.ejs`文件，添加下面的内容：
 ```html
-<!--如果"hexo的_config.yml"或"当前theme的_config.yml"配置了`mathjax: true`
+<!--如果"hexo的_config.yml"配置了mathjax的enable为真
     并且"page has `mathjax: true` in Front-matter"
     那么使用"mathjax.ejs"-->
-<% if (((config.mathjax || theme.mathjax) && page.mathjax)){ %>
+<% if (config.mathjax && config.mathjax.enable && page.mathjax){ %>
 <%- partial('mathjax') %>
 <% } %>
 ```
@@ -52,8 +52,11 @@ MathJax.Hub.Queue(function() {
   }
 });
 </script>
-<!--script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"-->
-   <script type="text/javascript" src= "<%- url_for() %>/MathJax-2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<% if (config.mathjax && config.mathjax.local){ %>
+  <script type="text/javascript" src= "<%- url_for() %>/MathJax-2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<% } else { %>
+  <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<% } %>
 ```
 
 #### 启用mathjax  

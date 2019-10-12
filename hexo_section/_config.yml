@@ -86,4 +86,8 @@ deploy:
 ## https://github.com/xiangming/landscape-plus
 ## 针对中国大陆地区对hexo官方主题landscape进行优化.
 ## Hexo让landscape支持mathjax
-mathjax: true
+## enable: (bool,我自己定义的)启用mathjax
+##  local: (bool,我自己定义的)从本地加载MathJax
+mathjax:
+  enable: true
+#  local: true
