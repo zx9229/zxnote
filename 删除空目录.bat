@@ -23,7 +23,8 @@
 @ECHO 当前目录: %cd%
 
 @REM 命令(RMDIR/RM)在删除目录时, 如果不是递归删除, 如果目录不为空, 那么将删除失败.
-@FOR /F "delims=" %%a IN ('DIR . /B /AD /S ^| SORT /R') DO RMDIR /Q "%%a" 2>NUL
+@FOR /F "delims=" %%a IN ('DIR . /B /AD /S ^| SORT /R') DO @RMDIR /Q "%%a" 2>NUL
+@ECHO 当前目录: %cd% 已清理.
 
 :EXIT
 @ECHO;

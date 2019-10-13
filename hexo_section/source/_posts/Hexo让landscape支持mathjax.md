@@ -106,6 +106,7 @@ MathJax.Hub.Queue(function() {
 [maths-symbols.pdf](http://mirrors.sjtug.sjtu.edu.cn/ctan/info/symbols/math/maths-symbols.pdf)。  
 
 #### 数学公式示例  
+如果不能正常显示公式，可以参考下面的公式的写法，用空格分隔开各个变量/元素，这样能解决大多数显示问题。  
 $ E = mc^2 $  
 $ V = \frac{4}{3} \pi R^3 $  
 $ log _a (M \bullet N) = log _a M + log _a N $  
