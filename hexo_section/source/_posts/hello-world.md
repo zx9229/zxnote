@@ -1,5 +1,6 @@
 ---
 title: Hello World
+date: 2019-10-01 23:59:59
 ---
 omit
 <!--more-->
