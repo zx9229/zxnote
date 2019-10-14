@@ -1,7 +1,7 @@
 ---
 title: Hexo让landscape支持mathjax
 categories:
-  - MyDefaultCategory
+  - Hexo
 tags:
   - MyDefaultTag
 mathjax: true

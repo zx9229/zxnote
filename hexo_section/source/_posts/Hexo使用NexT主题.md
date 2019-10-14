@@ -1,7 +1,7 @@
 ---
 title: Hexo使用NexT主题
 categories:
-  - MyDefaultCategory
+  - Hexo
 tags:
   - MyDefaultTag
 mathjax: false
