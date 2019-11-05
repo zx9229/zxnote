@@ -1,7 +1,7 @@
 ---
 title: SHFE-auYYMM
 categories:
-  - MyDefaultCategory
+  - 金融相关
 tags:
   - MyDefaultTag
 mathjax: false
