@@ -29,6 +29,11 @@ omit
 “广发期货”手机APP可以查看SHFE的五档行情。  
 “博易大师”PC端可以查看SHFE的五档行情。  
 文华财经官网的"wh6赢顺云端交易软件"可以查看SHFE的五档行情。  
+`@GC0W`(纽约金主连,同花顺),`@GC0Y`(纽约金连续,同花顺),`USDIND`(美元指数,同花顺)  
+`UDI`(美元指数,东方财富经典版)、`DXY`(美元指数,英为财情)、`DINIW`(美元指数,方小期APP)应当是同出一源。  
+[纽约黄金CFD(GC)期货行情,新闻,报价_新浪财经_新浪网](https://finance.sina.com.cn/futures/quotes/GC.shtml)(数据来源: 倚天财经)。  
+[美元指数(DINIW)_外汇_新浪财经_新浪网](https://finance.sina.com.cn/money/forex/hq/DINIW.shtml)(数据来源于倚天)。  
+[新闻直播平台_24小时提供财经快讯_黄金现货_外汇资讯_现货原油_快速稳定可靠的财经直播间。](http://live.gold678.com)。  
 
 * 外盘的合约的月份对应关系  
 外盘(国际期货)。对应关系貌似和键盘布局有关。  
@@ -61,7 +66,6 @@ au是21:00开盘。集合竞价于20:59结束。并(貌似)于20:59:00.500发出
 
 * 纽约金期货
 GC貌似是"Gold Comex"？  
-同花顺：`@GC0W`(纽约金主连),`@GC0Y`(纽约金连续),`USDIND`(美元指数)  
 [横华国际 - 合约细则 - 产品服务](https://www.henghua.hk/subpage/productservice/futuresbusiness/contract-details.html)。  
 [Futures & Options Trading for Risk Management - CME Group](https://www.cmegroup.com/)。  
 [Welcome to COMEX Gold Futures](https://www.cmegroup.com/trading/why-futures/welcome-to-comex-gold-futures.html)。  
