@@ -29,7 +29,6 @@ omit
 “广发期货”手机APP可以查看SHFE的五档行情。  
 “博易大师”PC端可以查看SHFE的五档行情。  
 文华财经官网的"wh6赢顺云端交易软件"可以查看SHFE的五档行情。  
-沪金。  
 
 * 外盘的合约的月份对应关系  
 外盘(国际期货)。对应关系貌似和键盘布局有关。  
@@ -47,9 +46,26 @@ N: 7月; Q: 8月; U: 9月; V:10月; X:11月; Z:12月;
 沪金。au的行情当前(2019-10)是1秒2个快照：00:00:00.000秒一个快照；00:00:00.500秒一个快照。  
 au是21:00开盘。集合竞价于20:59结束。并(貌似)于20:59:00.500发出集合竞价的结果的行情快照。  
 
-COMEX黄金是纽约商品交易所（芝加哥商业交易所集团）其中的一个交易品种，简称纽约金。  
-目前，世界黄金的定价权，主要是以美国和欧洲的市场为主导，国际金价的主要形成，来自两大交易所的黄金合约：COMEX（纽约商品交易所）的黄金期货，以及LBMA的伦敦现货黄金。其中，又以美国对世界黄金定价权的影响力最强。虽然上海黄金交易所现货黄金场内交易额全球第一，但是在定价上的话语权几乎为零，可以忽略不计。
+* 美元指数期货(US Dollar Index® Futures)
+[Intercontinental Exchange](https://www.intercontinentalexchange.com/)。  
+[US Dollar Index Futures | ICE](https://www.theice.com/products/194/US-Dollar-Index-Futures)。  
+[ICE U.S. Dollar Index FAQ](https://www.theice.com/publicdocs/futures_us/ICE_Dollar_Index_FAQ.pdf)。  
+`Market Specifications`=>`Commodity Code`=>`DX`。  
+
+* 美元指数
+[美元指数 - 维基百科，自由的百科全书](https://zh.wikipedia.org/zh-hans/美元指数)。  
+[ICE U.S. Dollar Index FAQ](https://www.theice.com/publicdocs/futures_us/ICE_Dollar_Index_FAQ.pdf)。  
+美元指数，又称美汇指数，是衡量美元在国际外汇市场汇率变化的一项综合指标，由美元对六个主要国际货币（欧元、日元、英镑、加拿大元、瑞典克朗和瑞士法郎）的汇率经过加权几何平均数计算获得。  
+在1973年3月布雷顿森林体系解体后，美元指数开始被选作参照点。那时美元指数是100.0000。从那时起，美元指数曾高涨到过160多点，也低至过80点以下。2008年3月16日，美元指数跌至70.698，是1973年开始以来最低点。美元指数全天24小时更新，交易所为美国洲际交易所（Intercontinental Exchange, ICE）。  
+美元指数在2015年两次突破100点高位，反应了全球资金从欧洲、新兴市场等地回流美国本土的趋势。  
+
+* 纽约金期货
+GC貌似是"Gold Comex"？  
 同花顺：`@GC0W`(纽约金主连),`@GC0Y`(纽约金连续),`USDIND`(美元指数)  
-`COMEX`(纽约商品交易所)  
 [横华国际 - 合约细则 - 产品服务](https://www.henghua.hk/subpage/productservice/futuresbusiness/contract-details.html)。  
-COMEX期金,COMEX黄金,GC貌似是"Gold Comex"?  
+[Futures & Options Trading for Risk Management - CME Group](https://www.cmegroup.com/)。  
+[Welcome to COMEX Gold Futures](https://www.cmegroup.com/trading/why-futures/welcome-to-comex-gold-futures.html)。  
+COMEX Gold futures (ticker symbol GC) represent the world’s leading benchmark futures contract for gold prices.  
+`Trading Hours`：`Sunday - Friday 5:00 p.m. – 4:00 p.m. CT with a 60-minute break each day at 4:00 p.m. CT`。  
+`Contract Months`：`Monthly: | Current calendar month plus next two calendar months | Within 23-month period: Any Feb, Apr, Aug, & Oct contract | Within 72-month period: Any Jun & Dec contract`。  
+![GC](GC.png)。  
