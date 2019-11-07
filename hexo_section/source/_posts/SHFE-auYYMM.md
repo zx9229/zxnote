@@ -57,7 +57,31 @@ au是21:00开盘。集合竞价于20:59结束。并(貌似)于20:59:00.500发出
 [Intercontinental Exchange](https://www.intercontinentalexchange.com/)。  
 [US Dollar Index Futures | ICE](https://www.theice.com/products/194/US-Dollar-Index-Futures)。  
 [ICE U.S. Dollar Index FAQ](https://www.theice.com/publicdocs/futures_us/ICE_Dollar_Index_FAQ.pdf)。  
+[U. S. DOLLAR INDEX BROCHURE](https://www.theice.com/publicdocs/ICE_USDX_Brochure.pdf)。  
 `Market Specifications`=>`Commodity Code`=>`DX`。  
+```
+How is the U.S. Dollar Index calculated?
+The ICE U.S. Dollar Index is calculated in real time approximately every 15 seconds from a
+multi-contributor feed of the spot prices of the Index’s component currencies. The price used for
+the calculation of the Index is the mid-point between the top of the book bid/offer in the
+component currencies. This real-time calculation is redistributed to all data vendors. The prices
+of the DX futures contracts are set by the market, and reflect interest rate differentials between
+the respective currencies and the U.S. dollar.
+美元指数如何计算？
+ICE美元指数大约是每15秒钟由多贡献者提供的指数组成货币的现货价格实时计算得出。
+用于计算指数的价格是组成货币中账面买入/卖出价的最高点之间的中点。
+实时计算将重新分配给所有数据供应商。
+DX期货合约的价格由市场确定，反映了各自货币与美元之间的利率差异。
+Where can I get real time prices for the ICE U.S. Dollar Index?
+The real-time prices for the underlying cash U.S. Dollar Index and for futures contracts based on
+the U.S. Dollar Index are available from market data vendors, from conformed independent
+software vendors, on direct access user systems, and on WebICE. Real time prices for ICE
+U.S. Dollar Index futures are also available on the ICE website; a one-time registration is required.
+在哪里可以获取ICE美元指数的实时价格？
+可以从市场数据供应商处获得基础现金美元指数和基于美元指数的期货合约的实时价格，
+来自合格的独立软件供应商，直接访问用户系统和WebICE。
+ICE网站上也提供ICE美元指数期货的实时价格；需要一次性注册。
+```
 
 * 美元指数
 [美元指数 - 维基百科，自由的百科全书](https://zh.wikipedia.org/zh-hans/美元指数)。  
