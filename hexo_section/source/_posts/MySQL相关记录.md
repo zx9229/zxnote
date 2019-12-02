@@ -5,6 +5,8 @@ categories:
   - SQL
   - MySQL
 tags:
+  - MyDefaultTag
+mathjax: false
 toc: false
 ---
 

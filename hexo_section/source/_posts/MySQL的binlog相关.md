@@ -49,8 +49,94 @@ Usage: mysqlbinlog.exe [options] log-files
                       last binlog passed on the command line.
   -v, --verbose       Reconstruct pseudo-SQL statements out of row events. -v
                       -v adds comments on column data types.
+  --include-gtids=name 
+                      Print events whose Global Transaction Identifiers were
+                      provided.
+  --exclude-gtids=name 
+                      Print all events but those whose Global Transaction
+                      Identifiers were provided.
   --no-defaults       Don't read default options from any option file,
                       except for login file.
 ```
 一个语句：  
-`mysqlbinlog.exe --no-defaults --verbose --database=某数据库 --result-file=某结果文件  ../data/mysql-bin.000001`
+`mysqlbinlog.exe --no-defaults --verbose --database=某数据库 --result-file=某结果文件 ./data/binlog.000001`。  
+`mysqlbinlog.exe --no-defaults  -v        -d        某数据库  -r           某结果文件 ./data/binlog.000001`。  
+如果使用了`--database`那么可能会报警告：  
+`WARNING: The option --database has been used. It may filter parts of transactions, but will include the GTIDs in any case. If you want to exclude or include transactions, you should use the options --exclude-gtids or --include-gtids, respectively, instead.`。  
+
+* 示例
+```sql
+-- 创建数据库
+CREATE DATABASE db_1;
+CREATE DATABASE db_2;
+-- 创建数据表
+CREATE TABLE db_1.cash_info(
+id      BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+user_id VARCHAR(32)     NOT NULL UNIQUE COMMENT '用户ID',
+balance DECIMAL(30,10)  NOT NULL        COMMENT '余额'
+);
+CREATE TABLE db_2.cash_flow(
+id      BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+user_id VARCHAR(32)     NOT NULL COMMENT '用户ID',
+in_out  INT             NOT NULL COMMENT '入金:1;出金:2;',
+amount  DECIMAL(30,10)  NOT NULL COMMENT '金额',
+balance DECIMAL(30,10)  NOT NULL COMMENT '余额',
+remark  VARCHAR(256)        NULL COMMENT '备注'
+);
+-- 创建存储过程
+DELIMITER //
+DROP PROCEDURE IF EXISTS db_2.pro_cash_flow;
+//
+CREATE PROCEDURE db_2.pro_cash_flow(
+IN  i_user_id VARCHAR(32),
+IN  i_in_out  INT,
+IN  i_amount  DECIMAL(30,10),
+IN  i_remark  VARCHAR(512),
+OUT o_code    INT,
+OUT o_message VARCHAR(256)
+)
+label:BEGIN
+SET o_code    = 0;
+SET o_message = 'SUCCESS';
+IF i_in_out NOT IN (1,2) THEN
+    SET o_code    = 1;
+    SET o_message = CONCAT('invalid in_out=',i_in_out);
+    LEAVE label;
+END IF;
+START TRANSACTION;
+IF NOT EXISTS(SELECT 1 FROM db_1.cash_info WHERE user_id=i_user_id)THEN
+    SET o_code    = 1;
+    SET o_message = CONCAT('invalid user_id=',i_user_id);
+    ROLLBACK;
+    LEAVE label;
+END IF;
+UPDATE db_1.cash_info SET balance = balance + (3-2*i_in_out)*i_amount WHERE user_id=i_user_id;
+INSERT INTO db_2.cash_flow(user_id,in_out,amount,balance,remark)VALUES(i_user_id,i_in_out,i_amount,(SELECT balance FROM db_1.cash_info WHERE user_id=i_user_id),i_remark);
+COMMIT;
+END;
+//
+DELIMITER ;
+```
+然后进行如下操作
+```sql
+-- 刷新和更换binlog
+FLUSH LOGS;
+SHOW MASTER STATUS;
+SHOW BINLOG EVENTS IN 'binlog文件名';
+-- 查询数据的语句
+SELECT * FROM db_1.cash_info;
+SELECT * FROM db_2.cash_flow;
+-- 添加用户
+INSERT INTO db_1.cash_info(user_id,balance)VALUES('test',0);
+-- 用户入金
+CALL db_2.pro_cash_flow('test', 1, 20, '入金', @o_code, @o_message);
+SELECT @o_code, @o_message;
+-- 【cmd】备份db_2库
+mysqldump.exe -P 端口 -u root -p --events --routines --triggers -r ./dump.dump --databases db_2
+-- 用户出金
+CALL db_2.pro_cash_flow('test', 2, 10, '出金', @o_code, @o_message);
+SELECT @o_code, @o_message;
+-- 用户入金
+CALL db_2.pro_cash_flow('test', 1, 15, '入金', @o_code, @o_message);
+SELECT @o_code, @o_message;
+```
