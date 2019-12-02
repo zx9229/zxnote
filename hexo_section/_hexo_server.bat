@@ -6,9 +6,11 @@
 @ECHO SCHTASKS /Create /TN HEXO_SERVER_BAT /RU zhangsan /SC ONSTART /TR "%SCRIPTS_DIR%%SCRIPT_NAME%"
 
 @SET DEFAULT_PORT=4000
-@SET /P PORT=please input listen port (default %DEFAULT_PORT%): 
-@IF /I "%PORT%"=="" (
-    SET PORT=%DEFAULT_PORT%
+@IF 1==0 (
+    SET /P PORT=please input listen port ^(default %DEFAULT_PORT%^): 
+    IF /I "%PORT%"=="" (
+        SET PORT=%DEFAULT_PORT%
+    )
 )
 
 %USERPROFILE%\AppData\Roaming\npm\hexo.cmd  server  --port=%PORT%  --cwd=%SCRIPTS_DIR%
