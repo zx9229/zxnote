@@ -5,15 +5,14 @@
 @ECHO SCHTASKS /Create /TN HEXO_SERVER_BAT /RU SYSTEM   /SC ONSTART /TR "%SCRIPTS_DIR%%SCRIPT_NAME%"
 @ECHO SCHTASKS /Create /TN HEXO_SERVER_BAT /RU zhangsan /SC ONSTART /TR "%SCRIPTS_DIR%%SCRIPT_NAME%"
 
-@SET DEFAULT_PORT=4000
-@IF 1==0 (
-    SET /P PORT=please input listen port ^(default %DEFAULT_PORT%^): 
-    IF /I "%PORT%"=="" (
-        SET PORT=%DEFAULT_PORT%
-    )
+@SET MANUAL_PORT=4000
+@IF 1==0 @GOTO RUN_HEXO
+@SET /P INPUT_PORT=please input listen port ^(default %MANUAL_PORT%^): 
+@IF /I NOT "%INPUT_PORT%"=="" (
+    SET MANUAL_PORT=%INPUT_PORT%
 )
-
-%USERPROFILE%\AppData\Roaming\npm\hexo.cmd  server  --port=%PORT%  --cwd=%SCRIPTS_DIR%
+:RUN_HEXO
+%USERPROFILE%\AppData\Roaming\npm\hexo.cmd  server  --port=%MANUAL_PORT%  --cwd=%SCRIPTS_DIR%
 
 @REM  Windows下设置开机自启动程序(不依赖账户登录)
 @REM  思路：创建一个任务计划，它以系统账户(SYSTEM)运行，它在开机时(ONSTART)运行。无需账户登录。
