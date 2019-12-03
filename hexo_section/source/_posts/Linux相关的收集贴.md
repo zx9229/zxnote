@@ -201,3 +201,8 @@ tail -f 文件名 | awk '操作' | grep "匹配条件"
 cleanobj:
   find . -type f -name "*.o" -exec rm -f {} \;
 ```
+
+#### ls按修改时间排序
+```
+ls -l -rt
+```
