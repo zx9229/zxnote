@@ -135,6 +135,7 @@ datadir=G:/mysql_archived_version/mysql-8.0.18-winx64/data
 ②查询所有的空文件夹：(sh)`find . -type d -empty`。  
 ③留痕有效的空文件夹：(sh)`find . -not -path "./.git/*" -type d -empty -exec touch {}/placeholder \;`。  
 ④提交版本库：(cmd)`git add * && git commit -m "initial submission"`。  
+⑤建忽略文件：(cmd)`ECHO /data/>.gitignore`。(只忽略当前目录下的data目录,子目录的data不在忽略范围内)  
 
 3. my.ini
 创建`G:\mysql_archived_version\mysql-8.0.18-winx64\my.ini`并填入下面的内容：
