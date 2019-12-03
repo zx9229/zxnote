@@ -172,8 +172,8 @@ mysqlx=0
 打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqladmin.exe -P 端口 -u root shutdown -p`用于关闭服务端进程，需输入密码。  
 
 8. 启停服务端进程
-启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe`。  
-启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe --console`。  
+启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe`。(安装服务后,就跳过执行了)  
+启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe --console`。(安装服务后,也能正常执行)  
 关闭：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqladmin.exe -P 端口 -u root shutdown -p`。  
 
 9. 将MySQL作为Windows服务启动
