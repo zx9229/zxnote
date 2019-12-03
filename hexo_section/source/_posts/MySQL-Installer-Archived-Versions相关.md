@@ -125,7 +125,7 @@ datadir=G:/mysql_archived_version/mysql-8.0.18-winx64/data
 
 #### 安装(定制版)
 
-配置文件没有绝对路径，不修改系统环境配置，  
+不(往配置文件)配置绝对路径，不修改系统环境配置，  
 
 1. 解压
 解压`mysql-8.0.18-winx64.zip`并使其能匹配到`G:\mysql_archived_version\mysql-8.0.18-winx64\bin\mysql.exe`。  
@@ -144,14 +144,14 @@ datadir=G:/mysql_archived_version/mysql-8.0.18-winx64/data
 port=13306
 
 # set basedir to your installation path
-# basedir=.
+# basedir=.       [经测试,若不指定它的值,程序会自动取值BASEDIR]
 
 # set datadir to the location of your data directory
-# datadir=./data
+# datadir=./data  [经测试,若不指定它的值,程序会自动取值BASEDIR/data]
 
 # https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html  (搜索"local_infile")
 # https://dev.mysql.com/doc/refman/8.0/en/load-data-local.html
-# loose-local-infile = 1
+loose-local-infile = 1
 
 # Disabling X Plugin
 # https://dev.mysql.com/doc/refman/8.0/en/x-plugin-disabling.html
