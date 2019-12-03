@@ -113,6 +113,7 @@ datadir=G:/mysql_archived_version/mysql-8.0.18-winx64/data
 安装服务(自动启动)`.\bin\mysqld.exe --install`。  
 安装服务(手动启动)`.\bin\mysqld.exe --install-manual`。  
 删除服务(　　　　)`.\bin\mysqld.exe --remove`。  
+查询服务`sc query state= all | findstr /I 服务名`。  
 启动服务`sc  start  服务名`。  
 启动服务`net start  服务名`。  
 关闭服务`sc  stop   服务名`。  
@@ -141,13 +142,17 @@ datadir=G:/mysql_archived_version/mysql-8.0.18-winx64/data
 [mysqld]
 # The TCP/IP Port the MySQL Server will listen on
 port=13306
+
 # set basedir to your installation path
-basedir=.
+# basedir=.
+
 # set datadir to the location of your data directory
-datadir=./data
-# https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html
-# https://dev.mysql.com/doc/refman/5.7/en/load-data-local.html
+# datadir=./data
+
+# https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html  (搜索"local_infile")
+# https://dev.mysql.com/doc/refman/8.0/en/load-data-local.html
 # loose-local-infile = 1
+
 # Disabling X Plugin
 # https://dev.mysql.com/doc/refman/8.0/en/x-plugin-disabling.html
 mysqlx=0
@@ -170,9 +175,22 @@ mysqlx=0
 启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe --console`。  
 关闭：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqladmin.exe -P 端口 -u root shutdown -p`。  
 
-9. 启停脚本
+9. 将MySQL作为Windows服务启动
+安装服务(自动启动)`.\bin\mysqld.exe --install`。  
+安装服务(手动启动)`.\bin\mysqld.exe --install-manual`。  
+删除服务(　　　　)`.\bin\mysqld.exe --remove`。  
+查询服务`sc query state= all | findstr /I 服务名`。  
+启动服务`sc  start  服务名`。  
+启动服务`net start  服务名`。  
+关闭服务`sc  stop   服务名`。  
+关闭服务`net stop   服务名`。  
+删除服务`sc  delete 服务名`。  
+
+10. 启停脚本
 启动脚本`start.bat`：
 ```bat
+@TITLE [cmd]mysqld.exe  
+
 @SETLOCAL enabledelayedexpansion  
 .\bin\mysqld.exe --console  
 @IF NOT "!ERRORLEVEL!" == "0" (  
@@ -186,6 +204,8 @@ PAUSE
 ```
 停止脚本`stop.bat`：
 ```bat
+@TITLE [cmd]mysqladmin.exe  
+
 @SET PORT=13306
 @SET PSWD=
 
