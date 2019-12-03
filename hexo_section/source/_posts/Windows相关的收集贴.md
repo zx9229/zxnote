@@ -129,3 +129,16 @@ $(Get-Item FILENAME.EXT).LastWriteTime='2006-01-02 15:04:05'
 ```
 Get-Childitem -path 'C:\test\' -Recurse | foreach-object { $_.LastWriteTime = Get-Date; $_.CreationTime = Get-Date }
 ```
+
+### 4K显示器
+[使用4K显示器遇到的坑](https://www.cnblogs.com/wei-feng/p/8013183.html)。  
+使用4K显示器后，鼠标移动变慢，有强烈的的滞后敢/粘滞感。达到了60HZ的刷新频率后，鼠标移动才没有粘滞感，  
+`win7`>`(桌面)鼠标右键`>`屏幕分辨率`>`高级设置`>`监视器`>`调整HZ`。  
+`win10`>`(桌面)鼠标右键`>`显示设置`>`高级显示设置`>`显示适配器属性`>`监视器`>`屏幕刷新频率`。  
+
+
+### 部分快捷键
+Win + B – 移动光标到系统托盘  
+针对双显示器: Win + Shift + 左 – 移动当前窗口到左边的显示器上  
+针对双显示器: Win + Shift + 右 – 移动当前窗口到右边的显示器上  
+win10：Win+(左/右)+(上/下)屏幕4等分。  
