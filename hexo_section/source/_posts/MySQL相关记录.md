@@ -321,6 +321,8 @@ SELECT              JSON_EXTRACT(json_value, '$.user')  FROM tb_config WHERE `ke
 SELECT JSON_UNQUOTE(JSON_EXTRACT(json_value, '$.user')) FROM tb_config WHERE `key`='DEFAULT_CFG';
 SELECT json_value->'$.phone_number."13912341234"'       FROM tb_config WHERE `key`='DEFAULT_CFG';
 SELECT json_value->'$.friend[0]'                        FROM tb_config WHERE `key`='DEFAULT_CFG';
+-- 查询
+SELECT * FROM tb_config WHERE JSON_CONTAINS(JSON_EXTRACT('["DEFAULT_CFG","test"]','$'),CONCAT('"',`key`,'"'));
 ```
 
 ## MySQL Workbench  
