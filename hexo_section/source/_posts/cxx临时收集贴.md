@@ -1,7 +1,7 @@
 ---
 title: cxx临时收集贴
 categories:
-  - C/C++
+  - C/CXX
 toc: false
 date: 2019-07-09 18:52:53
 tags:
