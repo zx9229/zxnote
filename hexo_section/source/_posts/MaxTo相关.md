@@ -26,8 +26,11 @@ omit
 [Tutorial - MaxTo](https://maxto.net/en/documentation/tutorial)。  
 [Configuration location](https://maxto.net/en/documentation/configuration/location)。  
 按着Shift的同时移动窗口：预览区域。  
-MaxTo的`设置`>`recipes(配方/食谱/方法)`的默认快捷键：  
-`Win+Alt+C`：中间(移动到中间)；  
-`Win+Alt+M`：监视器(最大化到监视器大小)；  
-`Win+Alt+上/下左/右`：互换窗口；  
-`Win+上/下左/右`：移动窗口；  
+MaxTo的`设置`>`recipes(配方/食谱/方法)`的有一些快捷键，可以熟悉一下。  
+
+* 向(上/下/左/右)替换窗口
+有两个区域，每个区域都有一个最大化的窗口，按下快捷键，这两个窗口将会互换位置。  
+
+* 配方
+我准备以AquaSnap为主以MaxTo为辅，所以删掉了重复的快捷键，修改了冲突的快捷键，最后如下所示：  
+![MaxTo_配方](MaxTo_recipes.png)  
