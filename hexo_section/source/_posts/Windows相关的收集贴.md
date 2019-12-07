@@ -137,6 +137,7 @@ Get-Childitem -path 'C:\test\' -Recurse | foreach-object { $_.LastWriteTime = Ge
 `win10`>`(桌面)鼠标右键`>`显示设置`>`高级显示设置`>`显示适配器属性`>`监视器`>`屏幕刷新频率`。  
 
 ### 部分快捷键
+Win + T - 任务栏(Taskbar),移动光标到任务栏  
 Win + B – 移动光标到系统托盘  
 针对双显示器: Win + Shift + 左 – 移动当前窗口到左边的显示器上  
 针对双显示器: Win + Shift + 右 – 移动当前窗口到右边的显示器上  
