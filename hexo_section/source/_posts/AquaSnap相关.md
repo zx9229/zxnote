@@ -8,8 +8,8 @@ mathjax: false
 toc: false
 date: 2019-12-06 20:32:25
 ---
-1靠(Win)2拉(Win+Alt)3移(Win+Shift+Ctrl)4调(Win+Alt+Shift+Ctrl)  
-1停靠2拉伸3移动4调大  
+1靠(Win)2伸(Win+Alt)3移(Win+Shift+Ctrl)4缩(Win+Alt+Shift+Ctrl)  
+1停靠2拉伸3移动4扩缩(调整窗口大小)  
 <!--more-->
 
 * 官网
