@@ -74,6 +74,16 @@ REG DELETE "HKEY_CURRENT_USER\Software\Scooter Software\Beyond Compare 4" /V Cac
 REG ADD "HKEY_CLASSES_ROOT\Directory\Background\shell\cmd_zx\command" /ve /t REG_SZ /d "cmd.exe /s /k pushd \"%V\""
 REG ADD "HKEY_CLASSES_ROOT\Directory\Background\shell\cmd_zx"         /ve /t REG_SZ /d "open cmd here"
 ```
+成功执行下面的命令后，会为鼠标右键添加一个"open cmd here"选项。这里注册了一个"C"的快捷键。
+```
+REG ADD "HKEY_CLASSES_ROOT\Directory\Background\shell\cmd_zx\command" /ve /t REG_SZ /d "cmd.exe /s /k pushd \"%V\""
+REG ADD "HKEY_CLASSES_ROOT\Directory\Background\shell\cmd_zx"         /ve /t REG_SZ /d "open cmd here (&C)"
+```
+成功执行下面的命令后，会为鼠标右键添加一个"open cmd here"选项。这里注册了一个"C"的快捷键。用"Shift+F10"看的比较清楚。
+```
+REG ADD "HKEY_CLASSES_ROOT\Directory\Background\shell\cmd_zx\command" /ve /t REG_SZ /d "cmd.exe /s /k pushd \"%V\""
+REG ADD "HKEY_CLASSES_ROOT\Directory\Background\shell\cmd_zx"         /ve /t REG_SZ /d "open &cmd here"
+```
 
 ### Windows程序崩溃生成dump文件
 [windows程序崩溃生成dump文件](https://blog.csdn.net/whatday/article/details/47275711)。  
@@ -139,6 +149,7 @@ Get-Childitem -path 'C:\test\' -Recurse | foreach-object { $_.LastWriteTime = Ge
 ### 部分快捷键
 Win + T - 任务栏(Taskbar),移动光标到任务栏  
 Win + B – 移动光标到系统托盘  
+Shift + F10 弹出(鼠标)右键菜单  
 针对双显示器: Win + Shift + 左 – 移动当前窗口到左边的显示器上  
 针对双显示器: Win + Shift + 右 – 移动当前窗口到右边的显示器上  
 win10：Win+(左/右)+(上/下)屏幕4等分。  
