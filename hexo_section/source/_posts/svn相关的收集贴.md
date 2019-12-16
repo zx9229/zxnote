@@ -1,6 +1,7 @@
 ---
 title: svn相关的收集贴
 categories:
+  - 版本控制
   - svn
 toc: false
 date: 2019-07-19 11:46:38

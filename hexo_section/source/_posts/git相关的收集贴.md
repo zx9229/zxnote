@@ -1,6 +1,7 @@
 ---
 title: git相关的收集贴
 categories:
+  - 版本控制
   - git
 toc: false
 date: 2018-06-22 18:51:33

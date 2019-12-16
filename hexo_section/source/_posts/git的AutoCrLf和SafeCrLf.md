@@ -2,7 +2,8 @@
 title: git的AutoCrLf和SafeCrLf
 date: 2018-02-01 18:27:25
 categories:
-- git
+  - 版本控制
+  - git
 tags:
 toc: false
 ---

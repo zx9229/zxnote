@@ -1,6 +1,7 @@
 ---
 title: git的Credential相关
 categories:
+  - 版本控制
   - git
 toc: false
 date: 2018-06-26 19:58:16

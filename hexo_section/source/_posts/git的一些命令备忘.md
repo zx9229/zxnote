@@ -1,6 +1,7 @@
 ---
 title: git的一些命令备忘
 categories:
+  - 版本控制
   - git
 toc: false
 date: 2018-07-09 23:04:13

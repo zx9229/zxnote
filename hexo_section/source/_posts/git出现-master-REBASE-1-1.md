@@ -1,6 +1,7 @@
 ---
 title: git出现(master|REBASE 1/1)
 categories:
+  - 版本控制
   - git
 toc: false
 date: 2019-09-23 11:21:44

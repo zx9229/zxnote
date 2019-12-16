@@ -1,7 +1,7 @@
 ---
 title: 'std::future和std::promise相关'
 categories:
-  - C/C++
+  - C/CXX
 toc: false
 date: 2019-06-03 17:06:39
 tags:

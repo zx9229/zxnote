@@ -1,7 +1,7 @@
 ---
 title: InternetDownloadManager相关
 categories:
-  - 软件
+  - 软件相关
 toc: false
 date: 2018-08-25 19:33:53
 tags:
