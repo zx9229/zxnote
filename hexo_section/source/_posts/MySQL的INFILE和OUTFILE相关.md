@@ -14,7 +14,7 @@ date: 2019-04-30 17:19:44
 
 猜测(TERMINATED(字段分隔符),ENCLOSED(字段包围符),ESCAPED(转义字符))的行为。  
 可以字段分隔符(,)字段包围符(")转义字符(|)：
-```
+```sql
 CREATE TABLE `tb_test` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `f1` TEXT NULL DEFAULT NULL,
