@@ -36,6 +36,12 @@ omit
 [纽约黄金CFD(GC)期货行情,新闻,报价_新浪财经_新浪网](https://finance.sina.com.cn/futures/quotes/GC.shtml)(数据来源: 倚天财经)。  
 [美元指数(DINIW)_外汇_新浪财经_新浪网](https://finance.sina.com.cn/money/forex/hq/DINIW.shtml)(数据来源于倚天)。  
 [新闻直播平台_24小时提供财经快讯_黄金现货_外汇资讯_现货原油_快速稳定可靠的财经直播间。](http://live.gold678.com)。  
+[7×24小时全球实时财经新闻直播_直播_财经_新浪网](http://finance.sina.com.cn/7x24/)。  
+[7×24小时全球实时财经新闻直播 - 微财讯](http://www.weicaixun.com.cn/live/)。  
+[财联社电报：机构和私募都在使用的A股24小时电报](https://www.cls.cn)。  
+[7x24快讯 | 选股宝 - 选题材抓龙头，就用选股宝](https://xuangubao.cn/live)。  
+[全球财经快讯_东方财富网](https://kuaixun.eastmoney.com)。  
+[今日股市最新消息_股票市场7*24小时滚动股市内参快讯_云财经股票内参平台](https://www.yuncaijing.com/insider/main.html)。  
 
 * 外盘的合约的月份对应关系  
 外盘(国际期货)。对应关系貌似和键盘布局有关。  
