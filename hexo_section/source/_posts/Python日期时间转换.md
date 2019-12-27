@@ -1,7 +1,7 @@
 ---
 title: Python日期时间转换
 categories:
-  - python
+  - Python
 tags:
   - MyDefaultTag
 mathjax: false

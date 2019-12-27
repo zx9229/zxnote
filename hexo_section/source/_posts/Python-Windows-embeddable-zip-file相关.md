@@ -1,7 +1,7 @@
 ---
 title: Python-Windows-embeddable-zip-file相关
 categories:
-  - python
+  - Python
 toc: false
 date: 2019-07-19 13:26:16
 tags:

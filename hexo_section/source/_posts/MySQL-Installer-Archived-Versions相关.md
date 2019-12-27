@@ -226,3 +226,28 @@ ECHO;
 PAUSE  
 )  
 ```
+
+#### 重置root密码
+
+[MySQL 5.7 | How to Reset the Root Password](https://dev.mysql.com/doc/refman/5.7/en/resetting-permissions.html)。  
+[MySQL 8.0 | How to Reset the Root Password](https://dev.mysql.com/doc/refman/8.0/en/resetting-permissions.html)。  
+
+1. 关闭MySQL服务端进程(正常)
+
+2. 为`shared-memory-base-name`选一个名字
+本例为`smbn`。  
+
+3. 启动MySQL服务端进程(特殊)
+命令：`.\bin\mysqld.exe --console --skip-grant-tables --shared-memory --shared-memory-base-name=smbn`。  
+
+4. 启动MySQL客户端进程(特殊)
+命令：`.\bin\mysql.exe --shared-memory-base-name=smbn`。  
+
+5. 重置root密码
+刷新权限：`FLUSH PRIVILEGES;`，  
+修改密码：`ALTER USER 'root'@'localhost' IDENTIFIED BY 'toor';`，  
+
+6. 退出MySQL服务端进程(特殊)
+命令：`.\bin\mysqladmin.exe --shared-memory-base-name=smbn -u root shutdown -p`。  
+
+7. 启动MySQL服务端进程(正常)

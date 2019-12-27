@@ -1,7 +1,6 @@
 ---
 title: python安装cx_Oracle
 categories:
-  - Linux
   - Python
 toc: false
 date: 2018-07-03 21:21:09
