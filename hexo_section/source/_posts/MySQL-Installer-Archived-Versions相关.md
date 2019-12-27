@@ -238,7 +238,7 @@ PAUSE
 本例为`smbn`。  
 
 3. 启动MySQL服务端进程(特殊)
-命令：`.\bin\mysqld.exe --console --skip-grant-tables --shared-memory --shared-memory-base-name=smbn`。  
+命令：`.\bin\mysqld.exe --console --skip-networking --skip-grant-tables --shared-memory --shared-memory-base-name=smbn`。  
 
 4. 启动MySQL客户端进程(特殊)
 命令：`.\bin\mysql.exe --shared-memory-base-name=smbn`。  
