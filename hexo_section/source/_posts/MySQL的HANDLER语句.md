@@ -38,14 +38,16 @@ BEGIN
     ROLLBACK; -- 不论有没有开启事务,均无脑ROLLBACK.
 END;
 
+SET o_code = 0, o_message = 'SUCCESS';
+
 START TRANSACTION;
 
 DROP   TEMPORARY TABLE IF EXISTS tb_test;
 CREATE TEMPORARY TABLE tb_test(k INT, UNIQUE INDEX(k));
 
-INSERT INTO tb_test(k) VALUE(1);
-INSERT INTO tb_test(k) VALUE(1); -- 抛异常.
-INSERT INTO tb_test(k) VALUE(2);
+INSERT INTO tb_test(k) VALUES(1);
+INSERT INTO tb_test(k) VALUES(1); -- 抛异常.
+INSERT INTO tb_test(k) VALUES(2);
 
 COMMIT;
 
