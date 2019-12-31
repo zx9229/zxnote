@@ -102,6 +102,7 @@ OR     mysqldump [OPTIONS] --all-databases [OPTIONS]
   --master-data[=#]   可选值为1和2.
   --single-transaction (满足一些条件时)在mysqldump的时候不锁表.
   --replace           Use REPLACE INTO instead of INSERT INTO.(用REPLACE代替INSERT)
+  --ignore-table=name Do not dump the specified table.
   
 导出某数据库(db_test)的某些表(tb_user,tb_info),(默认导出结构(建表语句,触发器)和数据):
 mysqldump.exe -h127.0.0.1 -P3306 -uroot -ptoor -r./sql.sql                    db_test tb_user tb_info
