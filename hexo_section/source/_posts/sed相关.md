@@ -2,7 +2,7 @@
 title: sed相关
 date: 2018-01-09 01:08:00
 categories:
-- Linux
+  - Linux
 tags:
 toc: false
 ---
@@ -184,3 +184,4 @@ ${dst}
 
 * 临时收集
 sed匹配数字的方法`[0-9]`和`[[:digit:]]`，但是无法使用`\d`，跟Perl不一样，Perl这三样都可以。  
+sed测试正则表达式时，可以用`sed -r "s/正则表达式//g" 文件名`删除匹配内容，这样便于测试。  
