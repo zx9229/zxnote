@@ -36,3 +36,5 @@ slmgr.vbs /ato
 有三种版本，一个是服务端vlmcsd，客户端vlmcs，服务端+客户端muti，客户端是用来检测kms服务的，  
 
 [打造自己的KMS服务器 | Hardie 在线博客](https://www.hardie.me/打造自己的KMS服务器/)。  
+
+经检测：`cn_windows_10_business_editions_version_1909_updated_dec_2019_x64_dvd_262ac8af.iso`和`cn_windows_10_consumer_editions_version_1909_updated_dec_2019_x64_dvd_835a48d3.iso`都选择"专业工作站"版本，都可以用`vlmcsd-1112-2018-10-20-Hotbird64_binaries.tar.gz`激活成"专业版"。  

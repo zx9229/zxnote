@@ -20,3 +20,12 @@ tags:
 Rufus、UUI(Universal USB Installer)、UltraISO软碟通、WinUSB、UNetbootin、(DiskGenius软件支持USB-FDD模式、USB-ZIP模式、USB-HDD模式启动盘的制作)、用命令制作windows系统U盘启动盘(U盘安装盘)。  
 
 我用了一下Rufus然后感觉不错。  
+
+* Rufus
+Create bootable USB drives the easy way。  
+[Rufus](http://rufus.ie/)。  
+[FAQ · pbatard/rufus Wiki](https://github.com/pbatard/rufus/wiki/FAQ)。  
+
+* UUI
+Universal USB Installer aka UUI。  
+[Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/)。  

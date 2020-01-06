@@ -52,9 +52,14 @@ REPLACE INTO schemas_name.table_B (field_1,field_2,field_3) SELECT field_1,field
 CREATE TABLE schemas_name.table_B AS SELECT * FROM schemas_name.table_A;
 ```
 #### 查询EVENTS
-```
+```SQL
 SELECT * FROM mysql.event;
 SELECT * FROM information_schema.events;
+```
+#### 查询所有表/所有字段
+```SQL
+SELECT `table_schema`,`table_name`,`table_type`,`table_comment` FROM `information_schema`.`tables`; -- WHERE `table_type`='BASE TABLE';
+SELECT `table_schema`,`table_name`,`column_name`,`column_type`,`column_key`,`column_comment` FROM `information_schema`.`columns`;
 ```
 #### 开启外部访问权限
 ```
@@ -137,12 +142,6 @@ mysql.exe     -h127.0.0.1 -P3306 -uroot -ptoor --default-character-set=utf8  -Dd
 新做法: SET PASSWORD FOR <user> = '<plaintext_password>'
 ```
 比如修改root的密码为toor可以`SET PASSWORD FOR root@localhost = 'toor'`。
-
-#### 查看MySQL的所有的表
-```SQL
-SELECT `table_schema`,`table_name` FROM `information_schema`.`tables`;
-SELECT `TABLE_SCHEMA`,`TABLE_NAME`,`COLUMN_NAME`,`COLUMN_TYPE`,`COLUMN_KEY` FROM `INFORMATION_SCHEMA`.`Columns`;
-```
 
 #### LOAD DATA
 [LOAD DATA Syntax](https://dev.mysql.com/doc/refman/5.7/en/load-data.html)。  
