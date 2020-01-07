@@ -81,11 +81,11 @@ Go的官网：[The Go Programming Language](https://golang.org/)。
 
 ### 预备知识(git相关)  
 git是可以允许代理服务器的。假定我们的HTTP(S)代理服务的IP端口为"127.0.0.1:1080"。  
-1. 查看git的代理相关设置("git config --get-regexp .*proxy")。  
-2. 设置git的代理相关设置("git config --global  http.proxy http://127.0.0.1:1080")。  
-3. 设置git的代理相关设置("git config --global https.proxy http://127.0.0.1:1080")。  
-4. 取消git的代理相关设置("git config --global --unset  http.proxy")。  
-5. 取消git的代理相关设置("git config --global --unset https.proxy")。  
+1. 查看git的代理相关设置(`git config --get-regexp .*proxy`)。  
+2. 设置git的代理相关设置(`git config --global  http.proxy http://127.0.0.1:1080`)。  
+3. 设置git的代理相关设置(`git config --global https.proxy http://127.0.0.1:1080`)。  
+4. 取消git的代理相关设置(`git config --global --unset  http.proxy`)。  
+5. 取消git的代理相关设置(`git config --global --unset https.proxy`)。  
 
 ### 使用代理安装软件的步骤  
 备注：代理部分参考了[go get 获得 golang.org 的项目](https://www.cnblogs.com/ghj1976/p/5087049.html)。  
