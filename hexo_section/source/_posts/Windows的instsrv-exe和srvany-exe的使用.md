@@ -19,6 +19,8 @@ date: 2020-01-08 16:42:29
 `a623a99d60f8d34d9fbe089bb64368f2`：`rktools.exe`，  
 `9f7acaad365af0d1a3cd9261e3208b9b`：`instsrv.exe`，  
 `4635935fc972c582632bf45c26bfcb0e`：`srvany.exe`，  
+[instsrv.exe](instsrv.exe)，  
+[srvany.exe](srvany.exe)，  
 
 * 一个示例
 instsrv.exe：`C:\Windows Resource Kits\Tools\instsrv.exe`，  
