@@ -14,21 +14,22 @@ omit
 * 临时
 |名字                     |说明一|说明二 |
 |:------------------------|:----|:------|
+|火绒安全软件              |安装版|安全软件|
+|搜狗输入法                |安装版|输入法|
 |360极速浏览器             |解压版|浏览器|
 |Google Chrome            |安装版|浏览器|
-|搜狗输入法                |安装版|输入法|
-|火绒安全                  |安装版|安全软件|
-|网页有道词典              |安装版|
+|网易有道词典              |安装版|
 |Everything               |解压版|文件(夹)搜索引擎|
-|notepad++                |解压版|
-|Visual Studio Code       |安装版|
-|EmEditor                 |解压版|
-|Git+TortoiseGit          |解压版+安装版|
-|Node.js                  |安装版|
-|Wox                      |安装版|
-|MaxTo                    |解压版|
-|AquaSnap                 |解压版|
+|LockHunter               |安装版|
 |TrayIt                   |解压版|
+|AquaSnap                 |解压版|
+|MaxTo                    |解压版|
+|Wox                      |安装版|
+|Visual Studio Code       |安装版|编辑器|
+|notepad++                |解压版|编辑器|
+|EmEditor                 |解压版|编辑器|
+|Git+TortoiseGit          |解压版+安装版|版本控制|
+|Node.js                  |安装版|
 |Beyond Compare           |安装版|
 |Python                   |解压版|
 |MySQL Windows ZIP Archive|解压版|
