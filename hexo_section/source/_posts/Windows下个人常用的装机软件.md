@@ -19,6 +19,7 @@ omit
 |360极速浏览器             |解压版|浏览器|
 |Google Chrome            |安装版|浏览器|
 |网易有道词典              |安装版|
+|网易邮箱大师              |安装版|
 |Everything               |解压版|文件(夹)搜索引擎|
 |LockHunter               |安装版|
 |TrayIt                   |解压版|
@@ -40,3 +41,5 @@ omit
 |FileLocator              |解压版|
 |DocFetcher               |解压版|
 |FileSeek                 |未知版|
+|Free Download Manager    |安装版|
+|Internet Download Manager|安装版|
