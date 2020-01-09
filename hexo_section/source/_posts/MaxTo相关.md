@@ -34,3 +34,11 @@ MaxTo的`设置`>`recipes(配方/食谱/方法)`的有一些快捷键，可以�
 * 配方
 我准备以AquaSnap为主以MaxTo为辅，所以删掉了重复的快捷键，修改了冲突的快捷键，最后如下所示：  
 ![MaxTo_配方](MaxTo_recipes.png)  
+
+* 过期处理
+貌似执行完下面的命令就行了，注意有个配置文件在`C:\Users\Administrator\AppData\Roaming\MaxTo\config.json`，  
+```bat
+REG DELETE "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall\MaxTo"
+RMDIR /S /Q %USERPROFILE%\AppData\Local\MaxTo\
+RMDIR /S /Q %USERPROFILE%\AppData\Roaming\MaxTo\
+```
