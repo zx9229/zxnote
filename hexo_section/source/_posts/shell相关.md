@@ -24,3 +24,7 @@ for param in "$@"; do
   echo "idx=${idx}, param=${param}"
 done
 ```
+
+* 一行写`while do done`
+[shell中如何一行写while_执着_新浪博客](http://blog.sina.com.cn/s/blog_ac843e330101c55g.html)。  
+例：`ls | while read line; do echo $line; done`。  
