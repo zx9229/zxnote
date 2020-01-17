@@ -239,6 +239,8 @@ loop_cycle1: LOOP
     INSERT INTO t_dst(`id`,`name`,`age`) SELECT v_id, v_name, v_age;
 END LOOP;
 
+CLOSE cur_req; -- ?
+
 COMMIT;
 
 SELECT COUNT(*) INTO o_ret_code FROM t_dst;
