@@ -18,10 +18,10 @@ DROP PROCEDURE IF EXISTS `proTest`;
 $$
 CREATE DEFINER=CURRENT_USER PROCEDURE `proTest`
 (
-    OUT o_ret_code INT,
-    OUT o_ret_mesg VARCHAR(32)
+    OUT o_code INT,
+    OUT o_mesg VARCHAR(32)
 )
-label: BEGIN
+procedure_label: BEGIN
 
 DECLARE v_done INT DEFAULT 0;
 DECLARE v_id   INT;
@@ -41,7 +41,7 @@ INSERT INTO t_src (`data`,`ctrl`) VALUES ('赵',''), ('钱','C'), ('孙',''),('�
 
 START TRANSACTION;
 
-SET o_ret_code = 0, o_ret_mesg = 'SUCCESS';
+SET o_code = 0, o_mesg = 'SUCCESS';
 
 OPEN cursor_src;
 
@@ -56,7 +56,7 @@ loop_cycle1: LOOP
         ITERATE loop_cycle1;
     END IF;
     IF v_ctrl = 'B' THEN -- break
-        SET o_ret_code = 0, o_ret_mesg = CONCAT("break when data(",v_data,")");
+        SET o_code = 0, o_mesg = CONCAT("break when data(",v_data,")");
         LEAVE   loop_cycle1;
     END IF;
 
@@ -64,6 +64,11 @@ loop_cycle1: LOOP
 END LOOP;
 
 CLOSE cursor_src;
+
+IF o_code <> 0 THEN
+    ROLLBACK;
+    LEAVE procedure_label;
+END IF;
 
 COMMIT;
 
