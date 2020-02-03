@@ -6,11 +6,14 @@ toc: false
 date: 2019-07-27 23:23:25
 tags:
 ---
-激活Office2016、Office2019等
+激活Office2016、Office2019等  
+备注：可以搜索`hexo 引用站内文章`查询相关信息。  
 <!-- more -->
+
+{% post_link vlmcsd相关 %}。  
 
 * KMS激活office2016  
 [2016_officeProPlus_projectPro_visioPro_激活脚本](2016_officeProPlus_projectPro_visioPro_激活脚本.7z)。  
 
 * KMS激活office_professional_plus_2019
-[激活脚本](cn_office_professional_plus_2019_x86_x64_dvd_5e5be643.iso.激活.cmd)。  
+[cn_office_professional_plus_2019激活脚本](cn_office_professional_plus_2019_x86_x64_dvd_5e5be643.iso.激活.cmd)。  
