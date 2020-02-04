@@ -18,6 +18,7 @@ omit
 |搜狗输入法                     |安装版|输入法|
 |360极速浏览器                  |解压版|浏览器|
 |Google Chrome                 |安装版|浏览器|
+|Microsoft Edge (Chromium)     |安装版|浏览器|
 |网易有道词典                   |安装版|
 |网易邮箱大师                   |安装版|
 |网易云笔记                     |安装版|
@@ -44,6 +45,7 @@ omit
 |FileSeek                      |未知版|
 |Free Download Manager(FDM)    |安装版|
 |Internet Download Manager(IDM)|安装版|
+|福昕阅读器                     |安装版|
 |QQ                            |安装版|
 |微信                          |安装版|
 |赢顺通用版(文华)               |安装版|
