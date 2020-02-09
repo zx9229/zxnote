@@ -36,7 +36,8 @@ MaxTo的`设置`>`recipes(配方/食谱/方法)`的有一些快捷键，可以�
 ![MaxTo_配方](MaxTo_recipes.png)  
 
 * 过期处理
-貌似执行完下面的命令就行了，注意有个配置文件在`C:\Users\Administrator\AppData\Roaming\MaxTo\config.json`，  
+貌似仅修改`%APPDATA%\MaxTo\config.json`的`license`的`firstStart`的值就行了。  
+旧：貌似执行完下面的命令就行了，注意有个配置文件在`%APPDATA%\MaxTo\config.json`，  
 ```bat
 REG DELETE "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall\MaxTo"
 RMDIR /S /Q %USERPROFILE%\AppData\Local\MaxTo\
