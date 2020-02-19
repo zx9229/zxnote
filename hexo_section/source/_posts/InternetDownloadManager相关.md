@@ -51,4 +51,5 @@ CRC32: 9007B8AC
 
 #### 强杀进程
 查询：`TASKLIST | FINDSTR /I idm`，  
-强杀：`TASKKILL /F /IM IDMan.exe || TASKKILL /F /IM IDMMsgHost.exe`，  
+强杀：`TASKKILL /F /IM IDMan.exe & TASKKILL /F /IM IDMMsgHost.exe`，  
+备注：可以搜索"bat 批处理 复合语句连接符"然后可知"用&可以连接两条命令"，  

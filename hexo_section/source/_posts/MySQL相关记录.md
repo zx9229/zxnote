@@ -136,6 +136,14 @@ mysql.exe     -h127.0.0.1 -P3306 -uroot -ptoor --default-character-set=utf8  -Dd
 #### processlist
 `show processlist`。
 
+#### 分析存储过程的耗时
+```
+① 执行存储过程，
+② SELECT * FROM `information_schema`.`processlist`;
+③ 肉眼感觉哪个语句出现的时间久、出现的次数多，判断它为耗时的语句，
+④ 针对性的优化耗时语句，
+```
+
 #### 修改密码
 ```
 老做法: SET PASSWORD FOR <user> = PASSWORD('<plaintext_password>')    不建议了.
