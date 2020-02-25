@@ -1,7 +1,7 @@
 ---
 title: IceBox冰箱APP相关
 categories:
-  - MyDefaultCategory
+  - 软件相关
 toc: false
 date: 2018-12-12 20:25:34
 tags:
@@ -13,6 +13,9 @@ tags:
 * IceBox冰箱APP的一个可用的备份文件
 [原始下载地址](https://pan.lanzou.com/i10lx2h?t)。文件名为`icebox_recovery_1526167839549.zip`。  
 [我的下载地址](IceBox冰箱.zip.zi)。  
+
+* adb相关
+{% post_link ADB相关 %}。  
 
 * Shizuku Manager
 `https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api`
