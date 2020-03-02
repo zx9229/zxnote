@@ -1,7 +1,7 @@
 ---
 title: wget相关
 categories:
-  - MyDefaultCategory
+  - 软件相关
 toc: false
 date: 2019-08-20 02:44:14
 tags:

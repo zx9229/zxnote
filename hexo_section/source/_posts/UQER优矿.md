@@ -1,7 +1,7 @@
 ---
 title: UQER优矿
 categories:
-  - MyDefaultCategory
+  - 软件相关
 toc: false
 date: 2019-09-01 02:06:38
 tags:

@@ -1,7 +1,7 @@
 ---
 title: VMwareWorkstation相关
 categories:
-  - MyDefaultCategory
+  - 软件相关
 toc: false
 date: 2019-07-27 21:21:28
 tags:
