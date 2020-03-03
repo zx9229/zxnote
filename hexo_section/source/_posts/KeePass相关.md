@@ -19,4 +19,8 @@ omit
 #### KeePass2Android  
 手机,免费  
 简介: KeePass的一个Android版客户端。  
-备注: 在Google Play搜索KeePass2Android即可。  
+备注: 在"Google Play"搜索"KeePass2Android"即可。  
+主要作者：`Philipp Crocoll`。  
+谷歌商店：`https://play.google.com/store/apps/details?id=keepass2android.keepass2android`。  
+反馈地址：`https://github.com/PhilippC/keepass2android/issues`。  
+可以在github上下载非离线版的APP，貌似`keepass2android.keepass2android-1.06f.apk`可以正常使用。  
