@@ -140,3 +140,10 @@ SELECT @o_code, @o_message;
 CALL db_2.pro_cash_flow('test', 1, 15, '入金', @o_code, @o_message);
 SELECT @o_code, @o_message;
 ```
+
+* 
+`ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)`。  
+[24.7 Stored Program Binary Logging](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-logging.html)，  
+由[binlog_format](https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_format)可知，`binlog_format`的默认值是`ROW`，有效值为`ROW`、`STATEMENT`、`MIXED`共3个。  
+我阅读了链接，然后有如下理解：  
+当`binlog_format`为`STATEMENT`时，若要根据log恢复数据库，如果某函数在前后两次执行的结果不一致，则恢复后的数据就很可能有问题，如果`ROW`就没有这个问题；如果`SHOW VARIABLES WHERE variable_name='binlog_format'`是`ROW`，那么可以选择`SET GLOBAL log_bin_trust_function_creators = 1`以跳过检查。  
