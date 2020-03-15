@@ -11,11 +11,15 @@ date: 2020-01-17 22:32:26
 omit
 <!--more-->
 
+[Microsoft Edge 帮助](https://support.microsoft.com/zh-cn/hub/4337664/microsoft-edge-help)，  
+[Microsoft Edge 中的键盘快捷方式](https://support.microsoft.com/zh-cn/help/4531783/microsoft-edge-keyboard-shortcuts)，  
+
 * 快捷键
 可以搜索`Edge 快捷键`查看更多。  
 |快捷键                 |名字                               |
 |:--------------------:|:---------------------------------:|
 |F4                    |选择地址栏                          |
+|F7                    |针对当前选项卡打开"插入光标浏览"      |
 |Ctrl+L                |选择地址栏                          |
 |Ctrl+E                |在地址栏中打开一个搜索查询           |
 |Ctrl+W                |关闭当前标签页                      |
