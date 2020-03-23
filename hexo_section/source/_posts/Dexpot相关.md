@@ -16,6 +16,16 @@ omit
 
 [Dexpot 1.6 Portable herunterladen](https://dexpot.de/download/dexpot_1614_portable_r2439.zip)，  
 
+* 报错
+```
+The Windows Common Controls (mscomct.ocx) are not
+properly ntalled on this system. Dexpot will now terminate.
+For more information, visit
+http://commoncontrols.dexpot.de
+```
+如果出现上面的报错，可以直接访问上面提到的网址，大概是  
+[Download and install the Common Controls](https://dexpot.de/download/dexpot_commoncontrols.exe)，
+
 设置>控制>热键>Dexpot组件
 * 默认快捷键
 Win+F2: 窗口目录  
