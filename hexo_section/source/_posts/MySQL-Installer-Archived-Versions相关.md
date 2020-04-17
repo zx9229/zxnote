@@ -157,6 +157,12 @@ loose-local-infile = 1
 # Disabling X Plugin
 # https://dev.mysql.com/doc/refman/8.0/en/x-plugin-disabling.html
 mysqlx=0
+
+# https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html  (搜索"secure_file_priv")
+# The MySQL server is running with the --secure-file-priv option so it cannot execute this statement.
+# 经测试,如果打开下面的配置项,那么该变量的值为空,则该变量无效,此时便关闭了该安全变量.
+secure_file_priv =
+
 ```
 4. 初始化数据目录
 打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe --initialize --console --user=mysql`并记下`root`的临时密码。  
