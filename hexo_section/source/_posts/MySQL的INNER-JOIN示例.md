@@ -1,7 +1,8 @@
 ---
 title: MySQL的INNER-JOIN示例
 categories:
-  - MyDefaultCategory
+  - SQL
+  - MySQL
 tags:
   - MyDefaultTag
 mathjax: false
