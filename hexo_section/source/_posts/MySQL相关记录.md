@@ -277,6 +277,11 @@ SELECT DATE_FORMAT(                       NOW(),'%Y-%m-%d %H:%i:%S.%f') FROM dua
 UPDATE dst d, src s 
   SET d.field_1=s.field_a,d.field_2=s.field_b 
   WHERE d.key_1=s.key_a AND d.key_2=s.key_b;
+
+UPDATE dst d LEFT JOIN src s 
+  ON d.key_1=s.key_a AND d.key_2=s.key_b 
+  SET d.field_1=s.field_a, d.field_2=s.field_b 
+  WHERE d.key_1='data1';
 ```
 
 * MySQL`LEFT JOIN`多个表
