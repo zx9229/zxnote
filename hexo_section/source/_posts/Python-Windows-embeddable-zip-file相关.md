@@ -54,7 +54,7 @@ wheel.exe
 C:\program_files_zx\python\python-3.8.1-embed-amd64>
 ```
 它会在python目录下新建`Scripts`目录放置pip相关文件，以及`Lib\site-packages`目录放置pip未来下载的扩展依赖模块库。  
-成功后，即可用类似`python -m pip install xxx`的方式安装自己的依赖包（xxx替换为自己想安装的模块名）。  
+成功后，即可用类似`python -m pip install xxx`的方式安装自己的依赖包（这样可以安装xxx到python所在的目录下，记得将xxx替换为自己想安装的模块名）。  
 
 #### 将路径加入PATH
 建议将`python.exe`和`pip.exe`加入`PATH`。  
@@ -89,12 +89,18 @@ Linux:　`os.path.realpath(os.path.join(sys.exec_prefix, 'lib/pythonX.Y/site-pac
 `sys.path.insert(0, os.path.split(os.path.realpath(__file__))[0])`。
 
 #### VSCode用yapf格式化python脚本
-VSCode的用户级别的配置文件一般位于`%APPDATA%\Code\User\settings.json`(即`%USERPROFILE%\AppData\Roaming\Code\User\settings.json`)。  
-1. 安装yapf：  
-`python -m pip install yapf`。  
-2. 设置VSCode：  
-`[File]文件`>`[Preferences]首选项`>`[Settings]设置(Ctrl+,)`然后搜索`python.formatting.provider`并将用户级别的选项设置到`yapf`。  
+VSCode的<label style="color:red">**用户**</label>级别的配置文件一般位于`%APPDATA%\Code\User\settings.json`(即`%USERPROFILE%\AppData\Roaming\Code\User\settings.json`)。  
+VSCode的**工作区**级别的配置文件一般位于`工作目录\.vscode\settings.json`。  
+VSCode中，**用户**级别的配置，优先于**工作区**级别的配置。  
+
+1. 安装yapf  
+`python -m pip install yapf`(这样可以安装yapf到python所在的目录下)。  
+2. 设置VSCode  
+`[File]文件`>`[Preferences]首选项`>`[Settings]设置(Ctrl+,)`然后搜索`python.formatting.provider`并为**用户**级别设置选项到`yapf`。  
+3. 设置yapf的路径(可选)  
+`[File]文件`>`[Preferences]首选项`>`[Settings]设置(Ctrl+,)`然后搜索`python.formatting.yapfPath`并为**用户**级别设置yapf的路径。  
+备注：如果`Shift+Alt+F`无效，请尝试上面的设置。比如我的yapf的路径是`C:\program_files_zx\python\python-3.8.1-embed-amd64\Scripts\yapf.exe`，环境变量`PYTHON_ROOT_38`是`C:\program_files_zx\python\python-3.8.1-embed-amd64`，因此路径也是`%PYTHON_ROOT_38%\Scripts\yapf.exe`，所以，可以在配置里填写`C:\program_files_zx\python\python-3.8.1-embed-amd64\Scripts\yapf.exe`或`${env:PYTHON_ROOT_38}\Scripts\yapf.exe`。  
 
 #### VSCode中python代码智能提示(IntelliSense)
-1. 设置VSCode
+1. 设置VSCode(可选)  
 `[File]文件`>`[Preferences]首选项`>`[Settings]设置(Ctrl+,)`然后搜索`python.jediEnabled`并将用户级别的复选框取消勾选。这样就启用了默认的`Microsoft Python Analysis Engine`。  
