@@ -77,7 +77,7 @@ C:\program_files_zx\python\python-3.8.2-embed-amd64>
 成功后，即可用类似`python -m pip install xxx`的方式安装自己的依赖包（这样可以安装xxx到python所在的目录下，记得将xxx替换为自己想安装的模块名）。  
 
 #### 将路径加入PATH
-建议将`python.exe`和`pip.exe`加入`PATH`。  
+可以将`python.exe`和`pip.exe`加入`PATH`。  
 ```bat
 wmic ENVIRONMENT CREATE name="PYTHON_ROOT_38", username="<system>", VariableValue="C:\program_files_zx\python\python-3.8.2-embed-amd64"
 :: wmic ENVIRONMENT SET name="PYTHON_ROOT_38", username="<system>", VariableValue="C:\program_files_zx\python\python-3.8.2-embed-amd64"
@@ -125,3 +125,60 @@ VSCode中，**用户**级别的配置，优先于**工作区**级别的配置。
 #### VSCode中python代码智能提示(IntelliSense)
 1. 设置VSCode(可选)  
 `[File]文件`>`[Preferences]首选项`>`[Settings]设置(Ctrl+,)`然后搜索`python.jediEnabled`并将用户级别的复选框取消勾选。这样就启用了默认的`Microsoft Python Analysis Engine`。  
+
+#### 临时更换VSCode中的python版本
+`python.pythonPath`,  
+`python.formatting.yapfPath`,  
+`python.linting.flake8Path`,  
+
+#### ModuleNotFoundError
+用`python -m pip install xxx`安装第三方包的时候，很可能会遇到`ModuleNotFoundError: No module named 'xxx'`的情况，例如：
+```bat
+C:\program_files_zx\python\python-3.8.2-embed-amd64>python -m pip install pyecharts
+Collecting pyecharts
+  Using cached pyecharts-1.7.1-py3-none-any.whl (128 kB)
+Collecting prettytable
+  Using cached prettytable-0.7.2.tar.bz2 (21 kB)
+    ERROR: Command errored out with exit status 1:
+     command: 'C:\program_files_zx\python\python-3.8.2-embed-amd64\python.exe' -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\zxzx\\AppData\\Local\\Temp\\pip-install-4da99j4k\\prettytable\\setup.py'"'"'; __file__='"'"'C:\\Users\\zxzx\\AppData\\Local\\Temp\\pip-install-4da99j4k\\prettytable\\setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base 'C:\Users\zxzx\AppData\Local\Temp\pip-install-4da99j4k\prettytable\pip-egg-info'
+         cwd: C:\Users\zxzx\AppData\Local\Temp\pip-install-4da99j4k\prettytable\
+    Complete output (5 lines):
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "C:\Users\zxzx\AppData\Local\Temp\pip-install-4da99j4k\prettytable\setup.py", line 3, in <module>
+        from prettytable import __version__ as version
+    ModuleNotFoundError: No module named 'prettytable'
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+
+C:\program_files_zx\python\python-3.8.2-embed-amd64>python setup.py egg_info
+python: can't open file 'setup.py': [Errno 2] No such file or directory
+
+C:\program_files_zx\python\python-3.8.2-embed-amd64>
+```
+此时，我们可以修改pip的代码，来解决这个问题：  
+执行`python -m pip --version`找到pip的目录；  
+搜索`import sys, setuptools, tokenize; sys.argv[0]`找到`.\pip\_internal\utils\setuptools_build.py`文件；  
+修改`.\pip\_internal\utils\setuptools_build.py`文件；  
+修改前：
+```python
+_SETUPTOOLS_SHIM = (
+    "import sys, setuptools, tokenize; sys.argv[0] = {0!r}; __file__={0!r};"
+    "f=getattr(tokenize, 'open', open)(__file__);"
+    "code=f.read().replace('\\r\\n', '\\n');"
+    "f.close();"
+    "exec(compile(code, __file__, 'exec'))"
+)
+```
+修改后：
+```python
+_SETUPTOOLS_SHIM = (
+    "import sys, os; sys.path.insert(0, os.path.dirname({0!r}));"
+    "import sys, setuptools, tokenize; sys.argv[0] = {0!r}; __file__={0!r};"
+    "f=getattr(tokenize, 'open', open)(__file__);"
+    "code=f.read().replace('\\r\\n', '\\n');"
+    "f.close();"
+    "exec(compile(code, __file__, 'exec'))"
+)
+```
+不出意外的话，将能正常安装第三方包。  

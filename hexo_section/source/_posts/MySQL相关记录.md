@@ -345,3 +345,6 @@ SELECT * FROM tb_config WHERE JSON_CONTAINS(JSON_EXTRACT('["DEFAULT_CFG","test"]
 执行当前行    : Ctrl+Enter
 执行所有/选中 : Ctrl+Shift+Enter
 ```
+* `safe update mode`
+`Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.`；  
+`Edit`>`Preferences`>`SQL Editor`>取消`Safe Updates(rejects UPDATEs and DELETEs with no restrictions)`的复选框。  
