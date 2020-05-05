@@ -20,3 +20,18 @@ bash auto_install_ius.sh
 yum list | grep python35
 yum list | grep python35 | grep setuptools
 ```
+
+### Python安装第三方包
+安装pandas:  
+`pip install pandas -i http://pypi.douban.com/simple --trusted-host pypi.douban.com`，  
+安装pymssql:  
+从`https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql`下载指定版本的`whl`文件(比如`pymssql‑2.1.4‑cp38‑cp38‑win_amd64.whl`)，并安装它:  
+`pip install C:\pymssql‑2.1.4‑cp38‑cp38‑win_amd64.whl`，  
+
+### pymysql报错
+`RuntimeError: cryptography is required for sha256_password or caching_sha2_password`，  
+`sha256_password`和`caching_sha2_password`这两个加密算法需要用到`cryptography`，  
+`pip install cryptography`，  
+
+### pandas和sqlalchemy
+pandas主要是以sqlalchemy方式与数据库建立链接，  
