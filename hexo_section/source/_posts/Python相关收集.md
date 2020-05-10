@@ -35,3 +35,9 @@ yum list | grep python35 | grep setuptools
 
 ### pandas和sqlalchemy
 pandas主要是以sqlalchemy方式与数据库建立链接，  
+
+### sqlalchemy连接MySQL并执行LoadDataLocalInfile报错
+[LOAD DATA LOCAL INFILE sqlalchemy和python到mysql db - 算法网](http://ddrv.cn/a/355066)，  
+`MySQLdb._exceptions.OperationalError: (2000, 'Load data local infile forbidden')`，  
+原来`sqlalchemy.create_engine("mysql://用户:密码@主机:端口/数据库?charset=utf8")`，  
+变成`sqlalchemy.create_engine("mysql://用户:密码@主机:端口/数据库?charset=utf8&local_infile=1")`，  
