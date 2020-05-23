@@ -6,11 +6,12 @@ toc: false
 date: 2018-08-22 20:31:59
 tags:
 ---
-略。
+搜索`Netsh commands for interface portproxy`或`Netsh interface portproxy commands`可能找到相关文章。
 
 <!-- more -->
 
 [Netsh commands for Interface Portproxy](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc776297(v=ws.10))。  
+[Netsh commands for interface portproxy](https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-interface-portproxy)。  
 [netsh interface portproxy的一个简单例子](https://blog.csdn.net/u013600225/article/details/52088196)。  
 下面是一个简单的例子：
 ```golang
