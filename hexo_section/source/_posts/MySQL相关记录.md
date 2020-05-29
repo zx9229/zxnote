@@ -62,10 +62,13 @@ SELECT `table_schema`,`table_name`,`table_type`,`table_comment` FROM `informatio
 SELECT `table_schema`,`table_name`,`column_name`,`column_type`,`column_key`,`column_comment` FROM `information_schema`.`columns`;
 ```
 #### 开启外部访问权限
-```
+```sql
 SELECT *          FROM mysql.user;
 SELECT host, user FROM mysql.user;
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '某用户的(新)密码' WITH GRANT OPTION;
+UPDATE mysql.user SET host='%' WHERE user='root';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+-- GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '某用户的(新)密码' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
 ```
 然后你可能会看到如下警告，大意是不赞成这样做，未来会把这个操作移除：
 ```
