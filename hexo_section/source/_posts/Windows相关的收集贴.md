@@ -97,13 +97,14 @@ wmic ENVIRONMENT WHERE "name='PYTHON_ROOT_37'" DELETE
 ```
 
 ### SysWOW64
-[什么是SysWow64 – 老麟技术笔记](https://blogs.msdn.microsoft.com/tianlin/2011/10/26/syswow64/)。  
+[什么是SysWow64 | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/tianlin/syswow64)。  
 `C:\Windows\System32`:  
 32位时，放的是32位的系统文件。  
-64位时，放的是32位的系统文件。  
+64位时，放的是64位的系统文件。  
 `C:\Windows\SysWOW64`:  
 是64位Windows，用来存放32位Windows系统文件的地方。  
 微软的解决方案是：Wow64，全称是32bit Windows On 64bit Windows（64位Windows上的32位Windows）。  
+个人备注：`SysWOW64`=>`Sys Win On Win64`。  
 
 ### 查看软件是32位还是64位
 `选中exe`->`右键`->`7 Zip`->`打开压缩包`->`信息`。  
