@@ -26,3 +26,15 @@ REG ADD    "HKEY_CLASSES_ROOT\*\shell\notepad++_zx"         /v Icon /t REG_SZ /d
 REG ADD    "HKEY_CLASSES_ROOT\*\shell\notepad++_zx"         /ve     /t REG_SZ /d "edit with notepad++"
 REG DELETE "HKEY_CLASSES_ROOT\*\shell\notepad++_zx"
 ```
+
+* 大小写转换  
+[notepadd++正则表达式大小写转换](https://www.cnblogs.com/njl041x/p/9626509.html)，  
+```
+猜测: U(Upper case);L(Lower case);
+小写转大写：
+查找【^.*$】替换【\U$0】
+查找【^(.*)$】替换【\U\1】或【\U$1】
+大写转小写：
+查找【^.*$】替换【\L$0】
+查找【^(.*)$】替换【\L\1】或【\L$1】
+```
