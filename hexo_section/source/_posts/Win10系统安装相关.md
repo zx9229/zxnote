@@ -23,3 +23,7 @@ net user administrator /active:no
 文件扩展名
 隐藏的项目
 打开文件资源管理器时打开：此电脑。
+
+* 安装系统时可能遇到的问题  
+[U盘安装Win8时，显示无法创建新的分区，也找不到现有的分区？ - 杨微粒的回答 - 知乎](https://www.zhihu.com/question/21117479/answer/86745809)，  
+[磁盘0和磁盘1的顺序问题_百度知道](https://zhidao.baidu.com/question/497402916.html)，  
