@@ -1,4 +1,4 @@
-# 根据以下链接的内容编写了下述代码
+﻿# 根据以下链接的内容编写了下述代码
 # http://gallery.pyecharts.org/#/Candlestick/professional_kline_brush
 import pandas
 import pyecharts
