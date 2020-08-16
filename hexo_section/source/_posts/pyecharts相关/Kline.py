@@ -43,14 +43,10 @@ if __name__ == '__main__':
     # (numpy.ndarray)转(list)
     dataY = dfY.values.tolist()
     # #########################################################################
-    pyecharts.charts.Kline().add_xaxis(xaxis_data=dataX).add_yaxis(
-        series_name='年K线',
-        y_axis=dataY,
+    pyecharts.charts.Kline().add_xaxis(xaxis_data=dataX).add_yaxis(series_name='年K线', y_axis=dataY,
     ).set_global_opts(datazoom_opts=[
-        pyecharts.options.DataZoomOpts(type_="slider",
-                                       orient="horizontal"),  # 水平滑动条,
-        pyecharts.options.DataZoomOpts(type_="slider",
-                                       orient="vertical"),  # 垂直滑动条,
+        pyecharts.options.DataZoomOpts(type_="slider", orient="horizontal"),  # 水平滑动条,
+        pyecharts.options.DataZoomOpts(type_="slider", orient="vertical"),  # 垂直滑动条,
         pyecharts.options.DataZoomOpts(type_="inside"),  # 鼠标滚轮可缩放,
     ]).render(__file__ + '.html')
     # #########################################################################
