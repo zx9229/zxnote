@@ -95,6 +95,7 @@ wmic ENVIRONMENT CREATE name="PYTHON_ROOT_37",    username="<system>",     Varia
 wmic ENVIRONMENT WHERE "name='PYTHON_ROOT_37' AND username='<system>'" SET VariableValue="C:\Program_Files_zx\python-3.7.4-embed-amd64"
 wmic ENVIRONMENT WHERE "name='PYTHON_ROOT_37'" DELETE
 ```
+备注：`SETX`和`wmic`在设置`PATH`的时候，都会将环境变量展开成绝对路径。  
 
 ### SysWOW64
 [什么是SysWow64 | Microsoft Docs](https://docs.microsoft.com/zh-cn/archive/blogs/tianlin/syswow64)。  
