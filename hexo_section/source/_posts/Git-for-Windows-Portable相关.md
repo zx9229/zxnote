@@ -55,11 +55,19 @@ REG DELETE "HKEY_CLASSES_ROOT\Directory\Background\shell\cmd_zx"
 我们还可以顺便安装"TortoiseGit"和"TortoiseGit-LanguagePack"，方便后续使用。
 
 * 临时记录
+[Git - 初次运行 Git 前的配置](https://git-scm.com/book/zh/v2/起步-初次运行-Git-前的配置)，  
 [Git - 配置 Git](https://git-scm.com/book/zh/v2/自定义-Git-配置-Git)，  
 [Git - 凭证存储](https://git-scm.com/book/zh/v2/Git-工具-凭证存储)，  
+System: 系统配置，所有用户的通用配置；  
+Global: 全局配置，当前用户的配置；  
+ Local: 本地配置，当前版本库的配置；  
 ```shell
+# 查看所有的配置以及它们所在的文件
+git config --list --show-origin
+
 git config --global user.email "zx@zx.com"
 git config --global user.name  "zx"
+
 git config --global --get core.autocrlf
 # true:  提交时把CRLF转换成LF，检出时把LF转换成CRLF。
 git config --global       core.autocrlf true
@@ -67,6 +75,7 @@ git config --global       core.autocrlf true
 git config --global       core.autocrlf input
 # false: 关闭转换功能。
 git config --global       core.autocrlf false  # 个人强烈建议用它
+
 git config --system --get     credential.helper
 git config --global --get     credential.helper
 git config          --get-all credential.helper
