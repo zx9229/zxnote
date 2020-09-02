@@ -24,14 +24,14 @@ _posts
 ```
 我们可以在文章中用`![图片描述](文章配图.png)`来引用这个资源。  
 
-## hexo-blog-encrypt 插件  
+## hexo-blog-encrypt 插件(弃)  
 更多请见：(https://github.com/MikeCoder/hexo-blog-encrypt)。  
 它是一个文章加密插件。可以在博客根目录下执行下面命令来安装它：
 ```
 npm install hexo-blog-encrypt --save
 ```
 
-## 启用搜索。  
+## 启用搜索(弃)  
 
 打开配置文件`_config.yml`，找到`URL`部分，其内容可能为：  
 ```
@@ -78,9 +78,25 @@ tags:
 然后，通过`hexo new [layout] <title>`新建一个文章的话，生成的文件会默认填写这个值，从而被归类。  
 分类可以是中文。如果是英文的话，经测试，其大小写是敏感的。  
 更多请见：[Front-matter | Hexo](https://hexo.io/zh-cn/docs/front-matter.html#分类和标签)。  
+备注，当前`.\scaffolds\post.md`的内容是
+```
+---
+title: {{ title }}
+date: {{ date }}
+categories: [MyDefaultCategory,]
+tags: [MyDefaultTag,]
+mathjax: false
+toc: false
+---
+omit
+<!--more-->
+```
 
 ## 为Hexo博客添加目录  
 
 更多请见：[辅助函数（Helpers） | Hexo](https://hexo.io/zh-cn/docs/helpers.html#toc)。  
 原作请见：[为Hexo博客添加目录 | The Bloom of Youth | 锦瑟华年](http://kuangqi.me/tricks/enable-table-of-contents-on-hexo/)。  
-备份请见：请在网站内寻找`为Hexo博客添加目录`的文章。
+备份请见：{% post_link 为Hexo博客添加目录 %}。  
+
+## 让landscape支持mathjax
+请见：{% post_link Hexo让landscape支持mathjax %}。  

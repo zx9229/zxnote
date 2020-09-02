@@ -9,6 +9,8 @@ tags:
 VMware Workstation(威睿工作站)
 <!-- more -->
 
+应该下载`Desktop & End-User Computing`>`VMware Workstation Pro`>`VMware Workstation 15.5.6 Pro for Windows`，  
+
 貌似 Windows 10 Enterprise 主机禁用 Credential Guard 或 Device Guard 之后才能打开运行在 12.5 之前版本的 Workstation 上的虚拟机电源。因此，用Win10专业版，别用Win10企业版。  
 
 [威睿虚拟机 VMware Workstation Pro 15.1.0 中文版 + 注册机](http://www.carrotchou.blog/122.html)。  

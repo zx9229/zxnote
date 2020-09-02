@@ -11,11 +11,14 @@ date: 2020-02-03 12:15:53
 npp(notepad-plus-plus), notepad++,
 <!--more-->
 
+* 建议使用32位的Notepad++  
+对于Notepad++，一个流行的代码编辑器来说，你可能想要使用32位的版本，因为64位的版本可能不支持所有的插件。比如`HEX-Editor`插件。  
+
 * 为系统环境变量添加`npp_notepad++`系统变量
-假如我们将`npp.7.8.9.bin.x64\notepad++.exe`匹配到路径`C:\zx_folder\program_files_zx\notepad++\npp.7.8.9.bin.x64\notepad++.exe`，可以：
+假如我们将`npp.7.8.9.bin\notepad++.exe`匹配到路径`C:\zx_folder\program_files_zx\notepad++\npp.7.8.9.bin\notepad++.exe`，可以：
 ```bat
 REM 将其加入系统环境变量
-SETX /M  npp_notepad++  "C:\zx_folder\program_files_zx\notepad++\npp.7.8.9.bin.x64"
+SETX /M  npp_notepad++  "C:\zx_folder\program_files_zx\notepad++\npp.7.8.9.bin"
 ```
 
 * 为(文件)鼠标右键菜单添加一个"edit with notepad++"选项(可重复执行)

@@ -40,8 +40,33 @@ Hexo博客系统的核心支持生成目录（Table of Contents），但其默�
   margin 1.5em 0 0.3em 1.5em
   padding 1.2em 1em 0 1em
   max-width 28%
-/*max-width 100%
-  我是转载者，我更喜欢自适应宽度，所以擅自添加了这几行注释，以方便我自己使用。*/
+.toc-title
+  font-size 120%
+#toc
+  line-height 1em
+  font-size 0.9em
+  float right
+  .toc
+    padding 0
+    margin 1em
+    line-height 1.8em
+    li
+      list-style-type none
+  .toc-child 
+    margin-left 1em
+```
+备注：上面的配置是原作者的配置，下面的配置是个人喜欢的配置
+```
+/*toc*/
+.toc-article
+  background #eee
+  border 1px solid #bbb
+  border-radius 10px
+  margin 1.5em 0 0.3em 1.5em
+  padding 1.2em 1em 0 1em
+  max-width 100%
+/*max-width 28%
+  我是转载者，我更喜欢自适应宽度，所以将28%调整成了100%，以方便我自己使用。*/
 .toc-title
   font-size 120%
 #toc

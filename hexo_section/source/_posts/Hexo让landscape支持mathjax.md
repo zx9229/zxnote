@@ -14,13 +14,15 @@ omit
 ## 步骤  
 将MathJax源码并入landscape主题。  
 
-#### 解压MathJax-2.7.6.zip到指定位置  
+#### 解压MathJax-2.7.6.zip到指定位置(弃)  
 [MathJax-2.7.6.zip](https://github.com/mathjax/MathJax/archive/2.7.6.zip)。  
 `MathJax-2.7.6.zip`:`fad3273dd7b087eb930328561d9c6273`。  
 解压`MathJax-2.7.6.zip`，让`MathJax-2.7.6/MathJax.js`匹配到`themes/landscape/source/MathJax-2.7.6/MathJax.js`。  
 
 #### 修改after-footer.ejs文件  
-修改`themes/landscape/layout/_partial/after-footer.ejs`文件，添加下面的内容：
+修改`themes/landscape/layout/_partial/after-footer.ejs`文件，添加下面的内容：  
+备注：添加到什么地方呢？  
+添加到"最后一个if判断之后"、`<%- js('js/script') %>`之前。
 ```html
 <!--如果"hexo的_config.yml"配置了mathjax的enable为真
     并且"page has `mathjax: true` in Front-matter"
@@ -60,7 +62,18 @@ MathJax.Hub.Queue(function() {
 ```
 
 #### 启用mathjax  
-如果"hexo的_config.yml"配置了mathjax的enable为真，并且"page has `mathjax: true` in Front-matter"，那么便启用mathjax了。  
+如果"hexo的`_config.yml`"配置了mathjax的enable为真，并且"page has `mathjax: true` in Front-matter"，那么便启用mathjax了。  
+```yml
+# mathjax
+## https://github.com/xiangming/landscape-plus
+## 针对中国大陆地区对hexo官方主题landscape进行优化.
+## Hexo让landscape支持mathjax
+## enable: (bool,我自己定义的)启用mathjax
+##  local: (bool,我自己定义的)从本地加载MathJax
+mathjax:
+  enable: true
+#  local: true
+```
 
 ## 思路  
 无意间看到了主题`landscape-plus`：针对中国大陆的hexo用户，优化hexo官方主题landscape。新增mathjax模块。  

@@ -20,11 +20,11 @@ toc: false
 
 在Windows下安装Git其实是安装的`Git for Windows`。  
 Git官网：https://git-scm.com/
-Git for Windows：https://git-for-windows.github.io/
+Git for Windows：https://gitforwindows.org/
 
 2. 为Git配置一个全局的name和email  
 
-假定我的name是zhangsan，email是zhangsan@163.com。  
+假定我的name是`zhangsan`，email是`zhangsan@163.com`。  
 打开`Git Bash`，执行以下命令：  
 ```
 USERNAME@MACHINE_NAME MINGW64 ~
@@ -51,6 +51,7 @@ Node.js官网：https://nodejs.org/en/
 5. 安装Hexo  
 
 打开"命令行提示"(`command-line prompt(cmd.exe)`)，然后执行 `npm install hexo-cli -g` 命令。其中`-g`表示全局安装。该命令不会影响工作目录。  
+可以`npm help install`查看帮助。  
 Hexo的英文网站：https://hexo.io/  
 Hexo的中文网站：https://hexo.io/zh-cn/  
 
