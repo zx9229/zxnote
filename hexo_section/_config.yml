@@ -81,13 +81,3 @@ deploy:
   type: git
   repo: https://zx9229@github.com/zx9229/zxnote.git
   branch: gh-pages
-
-# mathjax
-## https://github.com/xiangming/landscape-plus
-## 针对中国大陆地区对hexo官方主题landscape进行优化.
-## Hexo让landscape支持mathjax
-## enable: (bool,我自己定义的)启用mathjax
-##  local: (bool,我自己定义的)从本地加载MathJax
-mathjax:
-  enable: true
-#  local: true
