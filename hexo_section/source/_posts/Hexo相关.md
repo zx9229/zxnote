@@ -24,36 +24,7 @@ _posts
 ```
 我们可以在文章中用`![图片描述](文章配图.png)`来引用这个资源。  
 
-## hexo-blog-encrypt 插件(弃)  
-更多请见：(https://github.com/MikeCoder/hexo-blog-encrypt)。  
-它是一个文章加密插件。可以在博客根目录下执行下面命令来安装它：
-```
-npm install hexo-blog-encrypt --save
-```
-
-## 启用搜索(弃)  
-
-打开配置文件`_config.yml`，找到`URL`部分，其内容可能为：  
-```
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
-```
-应当修改URL的值为自己的博客地址，比如修改成  
-```
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://zx9229.github.io
-root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
-```
-你可能需要向谷歌搜索提交自己的网站，或许才能正常使用站内搜索功能。  
-
-## 让创建的文章有一个默认分类。  
+## 让创建的文章有一个默认分类  
 
 在`_config.yml`里搜索`default_layout`并找到其值，然后找到对应的md文件。  
 例如它的值是`post`，那么对应的文件是`./scaffolds/post.md`。  
@@ -92,11 +63,76 @@ omit
 <!--more-->
 ```
 
-## 为Hexo博客添加目录  
+## 使用其他theme  
 
-更多请见：[辅助函数（Helpers） | Hexo](https://hexo.io/zh-cn/docs/helpers.html#toc)。  
-原作请见：[为Hexo博客添加目录 | The Bloom of Youth | 锦瑟华年](http://kuangqi.me/tricks/enable-table-of-contents-on-hexo/)。  
-备份请见：{% post_link 为Hexo博客添加目录 %}。  
+下载某theme到根目录下的`./themes/.`下，然后修改theme的名字到对应的名字即可。  
+```yml
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: landscape
+```
 
-## 让landscape支持mathjax
-请见：{% post_link Hexo让landscape支持mathjax %}。  
+
+## 部署到GitHub  
+[将 Hexo 部署到 GitHub Pages | Hexo](https://hexo.io/zh-cn/docs/github-pages#Project-page)，  
+假如，GitHub上有一个Owner是`zhangsan`，其下有个Repository是`hexo_demo_repo`。那么：  
+打开配置文件`_config.yml`，找到`Deployment`部分，其内容可能为：  
+```yml
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: ''
+```
+我们要将静态文件上传到指定版本库的`gh-pages`分支，所以，应当将其修改成：  
+```yml
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: 'git'
+  repo: https://github.com/zhangsan/hexo_demo_repo.git
+  branch: gh-pages
+```
+打开配置文件`_config.yml`，找到`URL`部分，其内容可能为：  
+```yml
+# URL
+## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
+url: http://example.com
+root: /
+```
+因为Github上的Repository的名字是`hexo_demo_repo`，所以将其修改为：
+```yml
+# URL
+## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
+url: http://example.com/hexo_demo_repo
+root: /hexo_demo_repo/
+```
+
+## hexo-blog-encrypt 插件(弃)  
+更多请见：(https://github.com/MikeCoder/hexo-blog-encrypt)。  
+它是一个文章加密插件。可以在博客根目录下执行下面命令来安装它：
+```
+npm install hexo-blog-encrypt --save
+```
+
+## 启用搜索(弃)  
+
+打开配置文件`_config.yml`，找到`URL`部分，其内容可能为：  
+```
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://yoursite.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+```
+应当修改URL的值为自己的博客地址，比如修改成  
+```
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://zx9229.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+```
+你可能需要向谷歌搜索提交自己的网站，或许才能正常使用站内搜索功能。  

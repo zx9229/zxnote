@@ -6,27 +6,27 @@ categories:
 tags:
 toc: false
 ---
-从一个什么都不知道的小白，到部署网站到GitHub，所需的全部操作。
+从一个什么都不知道的小白，到部署网站到GitHub，所需的全部操作。  
 <!-- more -->
 
 假使你的机器是Windows，你准备使用Hexo。  
-建议你访问 `https://hexo.io/zh-cn/` 以学习Hexo。  
+建议你访问`https://hexo.io/zh-cn/`以学习Hexo。  
 这篇文章是我写了给自己看的。  
-下面是第一次使用Hexo的步骤。
+下面是第一次使用Hexo的步骤。  
 
-# 在本地配置Hexo环境
+## 在本地配置Hexo环境  
 
 1. 安装Git  
 
 在Windows下安装Git其实是安装的`Git for Windows`。  
-Git官网：https://git-scm.com/
-Git for Windows：https://gitforwindows.org/
+Git官网：https://git-scm.com/  
+Git for Windows：https://gitforwindows.org/  
 
 2. 为Git配置一个全局的name和email  
 
 假定我的name是`zhangsan`，email是`zhangsan@163.com`。  
 打开`Git Bash`，执行以下命令：  
-```
+```shell
 USERNAME@MACHINE_NAME MINGW64 ~
 $ git config --global user.email "zhangsan@163.com"
 
@@ -50,88 +50,171 @@ Node.js官网：https://nodejs.org/en/
 
 5. 安装Hexo  
 
-打开"命令行提示"(`command-line prompt(cmd.exe)`)，然后执行 `npm install hexo-cli -g` 命令。其中`-g`表示全局安装。该命令不会影响工作目录。  
-可以`npm help install`查看帮助。  
+打开"命令行提示"(`command-line prompt(cmd.exe)`)，然后执行 `npm install hexo-cli -g` 命令。其中`-g`表示全局安装。  
+该命令不会影响工作目录（如果你在某目录下执行该命令，执行之后，该目录不会受到影响）。  
+可以`npm help install`查看`npm install`的帮助文档。  
 Hexo的英文网站：https://hexo.io/  
 Hexo的中文网站：https://hexo.io/zh-cn/  
 
 6. 建站以寻找成就感  
 
-在cmd下，将当前目录切到"D:\"下面。  
-在cmd下运行命令`hexo init hexo_demo`。  
-将当前目录切到"D:\hexo_demo\"下。  
+在cmd下运行命令`hexo init D:\hexo_demo`在指定目录创建一个`Hexo folder`。  
+将当前目录切换到新生成的`Hexo folder`下。  
 在cmd下执行命令`npm install`。  
-在cmd下执行命令`hexo server`。  
+在cmd下执行命令`hexo server --port=4000`。  
 在浏览器里访问`http://localhost:4000/`查看情况。  
 如果一切正常的话，我们会看到一个网站，此时我们的成就感得到初步满足。  
 下面是具体的命令：  
-```
-C:\Users\USERNAME> cd /d D:\
-
-D:\> hexo init hexo_demo
+```bat
+C:\> hexo init D:\hexo_demo
 ...(略)...
 
-D:\> cd hexo_demo
+C:\> cd /d D:\hexo_demo
 
 D:\hexo_demo> npm install
 ...(略)...
 
-D:\hexo_demo> hexo server
+D:\hexo_demo> hexo server --port=4000
 INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 ```
 
 
-# 一个使用Hexo的示例  
+## 一个使用Hexo的示例  
 
-## 选择一个目录作为本次示例的根文件夹  
+### 选择一个目录作为本次示例的根文件夹  
 
 假设我们选择"D:\hexo_demo"目录作为本次示例的根目录。  
 我们需要执行以下命令来初始化这个根目录。  
-```
-D:\> hexo init hexo_demo
-D:\> cd hexo_demo
+```bat
+C:\> hexo init D:\hexo_demo
+C:\> cd /d D:\hexo_demo
 D:\hexo_demo> npm install
 ```
 
-## 写一篇文章  
+### 写一篇文章  
 
-假设这篇文章的标题为"测试Hexo"  
+假设这篇文章的标题为"测试Hexo"。  
 
-1. 新建一篇名为`测试Hexo`的文章  
+1. 新建一篇名为`Hexo测试`的文章  
 
-在根目录下执行命令 `hexo new "测试Hexo"`  
-此命令会自动生成一个名为"测试Hexo"的文件。  
+在根目录下执行命令`hexo new "Hexo测试"`。  
+此命令会自动生成一个名为"Hexo测试"的文件。  
+```bat
+D:\hexo_demo> hexo new "Hexo测试"
+INFO  Created: D:\hexo_demo\source\_posts\Hexo测试.md
 ```
-D:\hexo_demo> hexo new "测试Hexo"
-INFO  Created: D:\hexo_demo\source\_posts\测试Hexo.md
-```
 
-2. 编辑"测试Hexo.md"文件  
+2. 编辑"Hexo测试.md"文件  
 
-打开新生成的"测试Hexo.md"文件，保留已有的文字，继续书写文章内容即可。  
+打开新生成的"Hexo测试.md"文件，保留已有的文字，继续书写文章内容即可。  
 
-3. 启动服务器以查看效果  
+3. 启动服务以查看效果  
 
-在根目录下执行`hexo server`以启动服务器。  
+在根目录下执行`hexo server --port=4000`以启动服务。  
 在浏览器里访问`http://localhost:4000/`查看文章的内容和效果。  
-```
-D:\hexo_demo> hexo server
+```bat
+D:\hexo_demo> hexo server --port=4000
 INFO  Start processing
-INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 ```
 
 4. 生成静态文件  
 
 我们书写了文章之后，应当将文章生成静态文件。生成命令是`hexo generate`。  
 我们如果要部署网站的话，是需要将生成的html静态文件部署到网站服务器上的。  
-Jekyll你把原文上传GitHub，可以直接生成博客，也可以用在线编辑器处理。Hexo是本地生成html再上传。所以Hexo要求本地环境。  
-```
+Jekyll是你把原文上传GitHub，可以直接生成博客，也可以用在线编辑器处理。  
+Hexo是本地生成html再上传。所以Hexo要求本地环境。  
+```bat
 D:\hexo_demo> hexo generate
 ...(略)...
 
 D:\hexo_demo>
 ```
+
+## 部署到GitHub上  
+
+### 创建一个repository  
+
+比如我们创建一个名为`hexo_demo_repo`的Repository。  
+举例说明：  
+我叫张三，我在注册GitHub账号时，填写的Email为`zhangsan@163.com`，Username为`zhangsan`。  
+那么，在GitHub上，我的`Owner`就是`zhangsan`。  
+我创建了一个名为`hexo_demo_repo`的Repository。  
+那么这个Repository的下载地址应该是：  
+`https://github.com/zhangsan/hexo_demo_repo.git`，  
+待会我们期望从以下链接访问我们的网站：  
+`https://zhangsan.github.io/hexo_demo_repo/`，  
+
+### 安装 hexo-deployer-git  
+
+安装部署工具`hexo-deployer-git`，为后面将网站部署到GitHub上做准备。  
+在根目录下执行`npm install hexo-deployer-git --save`命令。  
+"--save"的含义：`--save: Package will appear in your dependencies.`。使用`npm help install`可以查看详情。  
+```bat
+D:\hexo_demo> npm install hexo-deployer-git --save
+...(略)...
+
+D:\hexo_demo>
+```
+
+### 修改_config.yml配置文件，使其能将网站部署到GitHub上  
+
+打开配置文件`_config.yml`，找到`Deployment`部分，其内容可能为：  
+```yml
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: ''
+```
+我们要将静态文件上传到指定版本库的`gh-pages`分支，所以，应当将其修改成：  
+```yml
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: 'git'
+  repo: https://github.com/zhangsan/hexo_demo_repo.git
+  branch: gh-pages
+```
+打开配置文件`_config.yml`，找到`URL`部分，其内容可能为：  
+```yml
+# URL
+## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
+url: http://example.com
+root: /
+```
+因为Github上的Repository的名字是`hexo_demo_repo`，所以将其修改为：
+```yml
+# URL
+## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
+url: http://example.com/hexo_demo_repo
+root: /hexo_demo_repo/
+```
+
+### 生成静态文件并部署网站到GitHub上以查看效果。  
+
+打开`Git Bash`，切换到根目录(/d/hexo_demo)下，执行`hexo g`和`hexo d`命令。  
+注意，在执行`hexo d`后，可能会让你输入用户名和密码。  
+`hexo generate`: 生成静态文件。  
+`hexo deploy`  : 部署网站。  
+```
+USERNAME@MACHINE_NAME MINGW64 /d/hexo_demo
+$ hexo generate
+...(略)...
+
+USERNAME@MACHINE_NAME MINGW64 /d/hexo_demo
+$ hexo deploy
+...(略)...
+
+USERNAME@MACHINE_NAME MINGW64 /d/hexo_demo
+```
+然后在浏览器输入`https://zhangsan.github.io/hexo_demo_repo/`查看效果。  
+不出意外的话，网站已经部署到GitHub上了。  
+
+
+___
+***
+---
 
 
 # 部署Hexo到GitHub上  
