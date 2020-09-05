@@ -48,8 +48,10 @@ echo "====== hexo-deployer-git                        ======"
 npm install hexo-deployer-git --save
 if [ $? -ne 0 ]; then echo "[ERROR]:${LINENO}"; exit 1; fi
 
-echo "====== hexo-blog-encrypt                        ======"
-npm install hexo-blog-encrypt --save
+echo "====== git clone landscape_zx                   ======"
+git clone  https://github.com/zx9229/landscape_zx.git  ./themes/landscape_zx_code
+if [ $? -ne 0 ]; then echo "[ERROR]:${LINENO}"; exit 1; fi
+mv  ./themes/landscape_zx_code/landscape  ./themes/landscape_zx
 if [ $? -ne 0 ]; then echo "[ERROR]:${LINENO}"; exit 1; fi
 
 echo "====== change to BASE_DIR                       ======"
