@@ -1,13 +1,16 @@
 ---
-title: Hexo相关
-date: 2018-06-21 19:04:32
+title: Hexo的一些偏好设置
 categories:
-- Hexo
+  - Hexo
 tags:
+  - MyDefaultTag
+mathjax: false
 toc: true
+date: 2017-07-31 23:59:59
 ---
-Hexo的一些自定义设置。
-<!-- more -->
+Hexo的一些自定义的偏好设置。  
+<!--more-->
+
 
 ## 启用“文章资源文件夹”  
 
