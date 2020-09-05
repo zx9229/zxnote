@@ -1,10 +1,12 @@
 ---
-title: 为Hexo博客添加目录
-date: 2018-06-21 21:03:44
+title: Hexo为博客添加目录
 categories:
   - Hexo
 tags:
-toc: true
+  - MyDefaultTag
+mathjax: false
+toc: false
+date: 2018-06-21 21:03:44
 ---
 拷贝自：[为Hexo博客添加目录 | The Bloom of Youth | 锦瑟华年](http://kuangqi.me/tricks/enable-table-of-contents-on-hexo/)。
 这篇文章写得非常好，我担心原作者哪一天把它给删了，所以就擅自备份了过来。请点击链接查看原作。
