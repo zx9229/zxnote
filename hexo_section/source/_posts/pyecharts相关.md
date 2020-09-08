@@ -27,3 +27,7 @@ omit
 
 * K线图附加均线外加成交量  
 [Kline_Line_Bar.py](Kline_Line_Bar.py)。  
+
+* 配置项  
+[全局配置项 - pyecharts - A Python Echarts Plotting Library built with love.](https://pyecharts.org/#/zh-cn/global_options)，  
+[系列配置项 - pyecharts - A Python Echarts Plotting Library built with love.](https://pyecharts.org/#/zh-cn/series_options)，  

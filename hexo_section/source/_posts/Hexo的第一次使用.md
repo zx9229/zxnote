@@ -47,6 +47,7 @@ Node.js官网：https://nodejs.org/en/
 `nvm does not support Windows`.  
 在Windows下建议下载LTS版本的安装包进行安装。  
 安装时，建议勾选`npm package manager`和`Add to PATH`以安装相应的组件和进行相应的设置。  
+`node --version`。  
 
 5. 安装Hexo  
 
@@ -55,6 +56,7 @@ Node.js官网：https://nodejs.org/en/
 可以`npm help install`查看`npm install`的帮助文档。  
 Hexo的英文网站：https://hexo.io/  
 Hexo的中文网站：https://hexo.io/zh-cn/  
+`hexo version`。  
 
 6. 建站以寻找成就感  
 
