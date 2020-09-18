@@ -41,3 +41,11 @@ pandas主要是以sqlalchemy方式与数据库建立链接，
 `MySQLdb._exceptions.OperationalError: (2000, 'Load data local infile forbidden')`，  
 原来`sqlalchemy.create_engine("mysql://用户:密码@主机:端口/数据库?charset=utf8")`，  
 变成`sqlalchemy.create_engine("mysql://用户:密码@主机:端口/数据库?charset=utf8&local_infile=1")`，  
+
+### convert list to dict
+```python
+src_list = [i for i in range(9)]
+dst_dict = {i: i*10 for i in src_list}
+dst_dict = zip([i for i in src_list], [i*10 for i in src_list])
+print(src_list, dst_dict)
+```
