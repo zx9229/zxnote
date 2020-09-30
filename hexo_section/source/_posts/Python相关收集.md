@@ -49,3 +49,20 @@ dst_dict = {i: i*10 for i in src_list}
 dst_dict = zip([i for i in src_list], [i*10 for i in src_list])
 print(src_list, dst_dict)
 ```
+
+### 安装到了用户目录
+如果是`Win10`，如果你安装`python`到`C:\Program Files\`目录下，可能因为权限不够，无法把包安装到正常的`site-packages`下，此时，程序会自动将其安装到用户目录下，如下所示：
+```
+C:\Users\admin> python -m pip install pyecharts
+Defaulting to user installation because normal site-packages is not writeable
+...(略)...
+WARNING: You are using pip version 20.1.1; however, version 20.2.3 is available.
+You should consider upgrading via the 'C:\Program Files\Python37\python.exe -m pip install --upgrade pip' command.
+```
+此时，你可以选择安装`python`到一个自定义目录(比如`C:\program_files_me\`)下，这个时候，就可以把包安装到正常目录下了。
+```
+C:\Users\admin> python -m pip install pyecharts
+...(略)...
+WARNING: You are using pip version 20.1.1; however, version 20.2.3 is available.
+You should consider upgrading via the 'C:\program_files_me\Python37\python.exe -m pip install --upgrade pip' command.
+```
