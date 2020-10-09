@@ -161,8 +161,17 @@ win10：Win+(左/右)+(上/下)屏幕4等分。
 [你真的会用鼠标吗？鼠标使用全揭秘](http://mouse.zol.com.cn/372/3729367_all.html)。  
 量一量自己用着顺手的那个鼠标的长宽高，然后可以网购一个差不多大小的。  
 
-### 命令行打开文件自愿管理器
+### 命令行打开文件资源管理器
 输入`start .`或`explorer .`即可在资源管理器中打开当前目录。  
+
+### 任务栏时间显示秒
+[Win10怎样让任务栏时间显示秒](https://jingyan.baidu.com/article/4ae03de3e091df3eff9e6b35.html)  
+执行以下命令，并重启电脑：
+```bat
+REG QUERY  "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock
+REG ADD    "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock /t REG_DWORD /d 1
+REG DELETE "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSecondsInSystemClock
+```
 
 ### Win10重启机器时显示"这个应用阻止你重启"
 ```bat
@@ -170,3 +179,4 @@ REG QUERY  "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks
 REG ADD    "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ /d 1
 REG DELETE "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks
 ```
+
