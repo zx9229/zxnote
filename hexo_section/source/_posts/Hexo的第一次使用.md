@@ -47,16 +47,17 @@ Node.js官网：https://nodejs.org/en/
 `nvm does not support Windows`.  
 在Windows下建议下载LTS版本的安装包进行安装。  
 安装时，建议勾选`npm package manager`和`Add to PATH`以安装相应的组件和进行相应的设置。  
-`node --version`。  
+命令查看版本号：`node --version`。  
 
 5. 安装Hexo  
 
 打开"命令行提示"(`command-line prompt(cmd.exe)`)，然后执行 `npm install hexo-cli -g` 命令。其中`-g`表示全局安装。  
 该命令不会影响工作目录（如果你在某目录下执行该命令，执行之后，该目录不会受到影响）。  
+一般来说，该命令会生成`hexo-cli`到`%AppData%\npm\node_modules\`目录下。  
 可以`npm help install`查看`npm install`的帮助文档。  
 Hexo的英文网站：https://hexo.io/  
 Hexo的中文网站：https://hexo.io/zh-cn/  
-`hexo version`。  
+命令查看版本号：`hexo version`。  
 
 6. 建站以寻找成就感  
 
