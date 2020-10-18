@@ -146,6 +146,7 @@ VSCode中，**用户**级别的配置，优先于**工作区**级别的配置。
 `python.pythonPath`,  
 `python.formatting.yapfPath`,  
 `python.linting.flake8Path`,  
+`python.formatting.autopep8Args`可以添加一项`--max-line-length=255`,  
 
 #### ModuleNotFoundError
 用`python -m pip install xxx`安装第三方包的时候，很可能会遇到`ModuleNotFoundError: No module named 'xxx'`的情况，例如：
