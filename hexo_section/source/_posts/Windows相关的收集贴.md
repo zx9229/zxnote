@@ -163,3 +163,10 @@ win10：Win+(左/右)+(上/下)屏幕4等分。
 
 ### 命令行打开文件自愿管理器
 输入`start .`或`explorer .`即可在资源管理器中打开当前目录。  
+
+### Win10重启机器时显示"这个应用阻止你重启"
+```bat
+REG QUERY  "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks
+REG ADD    "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ /d 1
+REG DELETE "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks
+```
