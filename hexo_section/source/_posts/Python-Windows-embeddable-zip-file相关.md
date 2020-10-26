@@ -11,6 +11,7 @@ tags:
 
 [嵌入式Python : 如何在U盘安装绿色版 Python](https://baijiahao.baidu.com/s?id=1592976804446590381)。  
 [Python 3.7.1 embeddable 及 PyQt5 开发环境搭建](https://blog.csdn.net/blackwoodcliff/article/details/84844917)。  
+[Python embedded install for Windows not being recognized](https://github.com/microsoft/vscode-python/issues/11434)。  
 
 #### 下载Python嵌入包
 [python-3.7.9-embed-amd64.zip](https://www.python.org/ftp/python/3.7.9/python-3.7.9-embed-amd64.zip)。  
@@ -141,6 +142,7 @@ VSCode中，**用户**级别的配置，优先于**工作区**级别的配置。
 `[File]文件`>`[Preferences]首选项`>`[Settings]设置(Ctrl+,)`然后搜索`python.jediEnabled`并将用户级别的复选框取消勾选。这样就启用了默认的`Microsoft Python Analysis Engine`。  
 
 #### 临时更换VSCode中的python版本
+`python.defaultInterpreterPath`,  
 `python.pythonPath`,  
 `python.formatting.yapfPath`,  
 `python.linting.flake8Path`,  
