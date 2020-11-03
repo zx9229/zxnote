@@ -13,6 +13,10 @@ omit
 
 [autopep8 · PyPI](https://pypi.org/project/autopep8/)  
 [hhatto/autopep8](https://github.com/hhatto/autopep8)  
+搜索`Flake8 documentation for Selecting and Ignoring Violations`查看`NOQA`相关信息。  
+[Selecting and Ignoring Violations — flake8 3.8.4 documentation](http://flake8.pycqa.org/en/latest/user/violations.html#in-line-ignoring-errors)  
+一种说法是`noqa = NO-QA (NO Quality Assurance)`  
+[What does '# noqa' mean in Python comments? - Stack Overflow](https://stackoverflow.com/questions/45346575/what-does-noqa-mean-in-python-comments)  
 
 * 临时禁止修复E501
 ```python
