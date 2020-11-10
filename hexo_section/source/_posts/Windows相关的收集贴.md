@@ -174,6 +174,7 @@ REG DELETE "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
 ```
 
 ### Win10重启机器时显示"这个应用阻止你重启"
+测试发现，执行之后，无需重启，立即生效，
 ```bat
 REG QUERY  "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks
 REG ADD    "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ /d 1

@@ -16,12 +16,16 @@ date: 2019-08-31 17:34:39
 [MySql 5.8 解压版安装步骤](https://blog.csdn.net/E_xiake/article/details/84951002)。  
 [5.8 Running Multiple MySQL Instances on One Machine](https://dev.mysql.com/doc/refman/8.0/en/multiple-servers.html)。  
 
-#### 下载
-如果想下载Windows下的"MySQL Installer (Archived Versions)"，一般应选择带有`MySQL Community (GPL) Downloads`、`MySQL Community Server`、`Windows (x86, 64-bit), ZIP Archive`、`Windows (x86, 64-bit), ZIP Archive  Debug Binaries & Test Suite`等类似字眼的链接。  
-[mysql-8.0.18-winx64.zip](https://dev.mysql.com/downloads/file/?id=490026)。  
-[mysql-8.0.18-winx64-debug-test.zip](https://dev.mysql.com/downloads/file/?id=490027)。  
+#### 下载压缩包版本的MySQL  
 
-#### 安装
+如果不想安装MySQL，而是希望下载一个压缩包，解压之后(经过简单的配置)可以立即使用MySQL，建议选择带有如下字眼的链接：  
+`MySQL官网`>`DOWNLOADS`>`MySQL Community (GPL) Downloads`>`MySQL Community Server`>`Windows (x86, 64-bit), ZIP Archive`。  
+`MySQL官网`>`DOWNLOADS`>`MySQL Community (GPL) Downloads`>`Download Archives`>`MySQL Community Server`>`Windows (x86, 64-bit), ZIP Archive`。  
+下面是一个压缩包版本的下载链接：  
+[mysql-8.0.22-winx64.zip](https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.22-winx64.zip)  
+[mysql-8.0.22-winx64-debug-test.zip](https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.22-winx64-debug-test.zip)  
+
+#### 安装  
 
 * 总结
 解压`mysql-8.0.18-winx64.zip`并使其能匹配到`G:\mysql_archived_version\mysql-8.0.18-winx64\bin\mysql.exe`。  
@@ -123,22 +127,24 @@ datadir=G:/mysql_archived_version/mysql-8.0.18-winx64/data
 9. Testing The MySQL Installation
 测试MySQL安装。  
 
-#### 安装(定制版)
+#### 安装(定制版)  
 
 不(往配置文件)配置绝对路径，不修改系统环境配置，  
 
-1. 解压
-解压`mysql-8.0.18-winx64.zip`并使其能匹配到`G:\mysql_archived_version\mysql-8.0.18-winx64\bin\mysql.exe`。  
+1. 解压  
+解压`mysql-8.0.22-winx64.zip`并使其能匹配到`J:\mysql_archived_versions\mysql-8.0.22-winx64\bin\mysql.exe`。可以`DIR /B J:\mysql_archived_versions\mysql-8.0.22-winx64\bin\mysql.exe`检测文件是否存在。  
 
-2. 版本库
-①创建版本库：(cmd)`git init G:\mysql_archived_version\mysql-8.0.18-winx64\`。  
-②查询所有的空文件夹：(sh)`find . -type d -empty`。  
-③留痕有效的空文件夹：(sh)`find . -not -path "./.git/*" -type d -empty -exec touch {}/placeholder \;`。  
-④提交版本库：(cmd)`git add * && git commit -m "initial submission"`。  
-⑤建忽略文件：(cmd)`ECHO /data/>.gitignore`。(只忽略当前目录下的data目录,子目录的data不在忽略范围内)  
+2. 版本库留痕  
+①创建版本库：(cmd)`git init J:\mysql_archived_versions\mysql-8.0.22-winx64\`。  
+②查询所有的空文件夹：(sh)`find . -type d -empty`。(工作目录为`.git`所在的目录)  
+③查询有效的空文件夹：(sh)`find . -not -path "./.git/*" -type d -empty`。  
+④留痕有效的空文件夹：(sh)`find . -not -path "./.git/*" -type d -empty -exec touch {}/placeholder \;`。  
+⑤关自动转换: (cmd)`git config --local core.autocrlf false`。  
+⑤提交版本库：(cmd)`git add * && git commit -m "initialize commit for mysql"`。  
+⑥建忽略文件：(cmd)`ECHO /data/>.gitignore`。(只忽略当前目录下的data目录,子目录的data不在忽略范围内)  
 
 3. my.ini
-创建`G:\mysql_archived_version\mysql-8.0.18-winx64\my.ini`并填入下面的内容：
+创建`J:\mysql_archived_versions\mysql-8.0.22-winx64\my.ini`并填入下面的内容：  
 ```ini
 [mysqld]
 # The TCP/IP Port the MySQL Server will listen on
@@ -162,24 +168,25 @@ mysqlx=0
 # The MySQL server is running with the --secure-file-priv option so it cannot execute this statement.
 # 经测试,如果打开下面的配置项,那么该变量的值为空,则该变量无效,此时便关闭了该安全变量.
 secure_file_priv =
-
 ```
-4. 初始化数据目录
+
+4. 初始化数据目录  
 打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe --initialize --console --user=mysql`并记下`root`的临时密码。  
 
-5. 启动服务端进程
+5. 启动服务端进程  
 打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe --console`用于首次启动服务端进程。  
 
-6. 客户端登录+修改临时密码
+6. 客户端登录+修改临时密码  
 打开`cmd`并进入`BASEDIR`并执行`.\bin\mysql.exe -P 端口 -u root -p`用于启动客户端进程，需输入密码。  
 执行SQL语句`ALTER USER 'root'@'localhost' IDENTIFIED BY 'toor';`可以修改root密码到toor。  
+修改密码后，退出客户端。使用新密码登录客户端，以确认修改结果。  
 
-7. 关闭服务端进程
+7. 关闭服务端进程  
 打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqladmin.exe -P 端口 -u root shutdown -p`用于关闭服务端进程，需输入密码。  
 
-8. 启停服务端进程
-启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe`。(安装服务后,就跳过执行了)  
-启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe --console`。(安装服务后,也能正常执行)  
+8. 启停服务端进程  
+启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe`。(将其安装进Windows服务后,就跳过执行了)  
+启动：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqld.exe --console`。(将其安装进Windows服务后,也能正常执行)  
 关闭：打开`cmd`并进入`BASEDIR`并执行`.\bin\mysqladmin.exe -P 端口 -u root shutdown -p`。  
 
 9. 将MySQL作为Windows服务启动
