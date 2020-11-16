@@ -343,6 +343,22 @@ SELECT json_value->'$.friend[0]'                        FROM tb_config WHERE `ke
 SELECT * FROM tb_config WHERE JSON_CONTAINS(JSON_EXTRACT('["DEFAULT_CFG","test"]','$'),CONCAT('"',`key`,'"'));
 ```
 
+* 查询结果集附加一列自增序列号
+```sql
+DROP   TEMPORARY TABLE IF EXISTS teacher;
+CREATE TEMPORARY TABLE teacher(
+tid   BIGINT      NOT NULL AUTO_INCREMENT PRIMARY KEY,
+tname VARCHAR(32) NOT NULL
+);
+INSERT INTO teacher(tid,tname)VALUES(3,'张三'),(4,'李四'),(5,'王五'),(6,'赵六');
+SELECT * FROM teacher;
+-- 方式1
+SET @i=0;
+SELECT  @i:=@i+1 , t.* FROM teacher AS t;
+-- 方式2
+SELECT (@i:=@i+1), t.* FROM (SELECT @i:=0)ii, teacher t;
+```
+
 ## MySQL Workbench  
 ```
 执行当前行    : Ctrl+Enter

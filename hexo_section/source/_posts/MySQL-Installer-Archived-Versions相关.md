@@ -139,7 +139,7 @@ datadir=G:/mysql_archived_version/mysql-8.0.18-winx64/data
 ②查询所有的空文件夹：(sh)`find . -type d -empty`。(工作目录为`.git`所在的目录)  
 ③查询有效的空文件夹：(sh)`find . -not -path "./.git/*" -type d -empty`。  
 ④留痕有效的空文件夹：(sh)`find . -not -path "./.git/*" -type d -empty -exec touch {}/placeholder \;`。  
-⑤关自动转换: (cmd)`git config --local core.autocrlf false`。  
+⑤关自动转换：(cmd)`git config --local core.autocrlf false`。  
 ⑤提交版本库：(cmd)`git add * && git commit -m "initialize commit for mysql"`。  
 ⑥建忽略文件：(cmd)`ECHO /data/>.gitignore`。(只忽略当前目录下的data目录,子目录的data不在忽略范围内)  
 
