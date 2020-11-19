@@ -44,3 +44,4 @@ omit
 
 * 一些插件  
 [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)  
+[REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)  
