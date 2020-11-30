@@ -181,3 +181,6 @@ REG ADD    "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ
 REG DELETE "HKEY_USERS\.DEFAULT\Control Panel\Desktop" /v AutoEndTasks
 ```
 
+### 查看进程树
+[Process Monitor - Windows Sysinternals | Microsoft Docs](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)  
+![ProcessMonitor_显示进程树](ProcessMonitor_显示进程树.png)  
