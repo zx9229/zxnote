@@ -35,3 +35,7 @@ class Interval(Enum):
     DAILY = "d"
     WEEKLY = "w"
 ```
+
+* test
+例如`class DoubleMaStrategy(CtaTemplate):`可以在源码里搜索`CtaTemplate`应该能找到`vnpy\app\cta_strategy\template.py`里面有`class CtaTemplate(ABC):`的定义，然后就可以查看这个类有哪些接口，以及接口的说明了。  
+文档`docs\cta_strategy.md`或许有点用处。  
