@@ -52,7 +52,9 @@ usage: 1. export [-r REV]   URL[@PEGREV] [PATH]
 例如：`svn export -r 110120 http://localhost:80/repos/my_code/trunk/test.txt C:\.`。  
 
 #### svn update 忽略指定目录
-[SVN update 忽略指定文件](https://www.jianshu.com/p/3fda584b0a01)。
+[SVN update 忽略指定文件](https://www.jianshu.com/p/3fda584b0a01)。  
+[TortoiseSVN 更新时忽略指定文件夹 - jounyl - 博客园](https://www.cnblogs.com/jouny/p/4151046.html)。  
+[svn更新时忽略指定文件或文件夹_ksr12333的专栏-CSDN博客](https://blog.csdn.net/ksr12333/article/details/72897051)。  
 ```
 [root@09b4bf96e3d5 ~]# svn checkout http://localhost:80/repos/my_code
 ...(略)...

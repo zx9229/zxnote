@@ -37,3 +37,24 @@ With Mirror files mode, different (both newer and older) files in the source dir
 `Mirror files`模式时，对于一个文件，如果源目录里的文件（更新或更旧），那么文件会被传输到目标目录。否则，其行为和`Synchronize files`模式相同。  
 
 With Synchronize timestamps mode, timestamps of target files are updated to match timestamps of source files. It will not do any transfers, nor delete anything. Simply, whenever it finds the same file in both directories, it updates a timestamp of a target file to match the one of a source file. In Both mode, it always updates the older timestamp. The mode is available with SFTP protocol only.  
+
+
+[Scripting and Task Automation :: WinSCP](https://winscp.net/eng/docs/scripting)  
+[Command-line Options :: WinSCP](https://winscp.net/eng/docs/commandline)  
+命令`WinSCP.exe /help`查看帮助。  
+命令`WinSCP.exe /console /script=C:\winscp_script.txt`可以执行脚本。脚本内容可以如下所示：  
+```sh
+# https://winscp.net/eng/docs/scriptcommand_open
+# open  sftp://用户:密码@主机地址:端口/
+open    sftp://root:toor@127.0.0.1:22/
+# https://winscp.net/eng/docs/scriptcommand_synchronize
+# synchronize local|remote|both [ <local directory> [ <remote directory> ] ]
+# 需求<local directory>已创建;
+# local: changes from remote directory are applied to local directory.
+# local: 远程目录的修改将会应用于本地目录(只有本地目录被修改);
+synchronize  -transfer=binary  local  C:\test_sync\.  /root/test_sync/.
+# Closes session
+close
+# Closes all sessions and terminates the program
+exit
+```
