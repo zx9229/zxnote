@@ -57,12 +57,6 @@ du -s  ./* | sort -nk1
 du -ah --max-depth=1
 ```
 
-### ntpdate授时  
-[全球可用的NTP服务器列表与解析服务 - ntp.org.cn & ntpdate.net](http://www.ntp.org.cn/)  
-```
-ntpdate -q cn.ntp.org.cn
-```
-
 ### 查看网络流量相关数据
 别人推荐了`iftop`和`NetHogs`，我还没有尝试。
 
@@ -152,6 +146,20 @@ vi /etc/ntp.conf
 systemctl start  ntpd.service
 # 设置开机自启动
 systemctl enable ntpd.service
+```
+
+### ntpdate授时  
+[全球可用的NTP服务器列表与解析服务 - ntp.org.cn & ntpdate.net](http://www.ntp.org.cn/)  
+```
+ntpdate -q cn.ntp.org.cn
+```
+例如
+```
+[test@localhost ~]$ ntpdate -q cn.ntp.org.cn
+server 203.107.6.88, stratum 2, offset 1.397214, delay 0.08357
+17 Dec 18:37:53 ntpdate[20574]: step time server 203.107.6.88 offset 1.397214 sec
+其中, offset 1.397214 sec, 表示比标准时间慢1.3秒;
+速记方式: 本地时间 + offset = 标准时间;
 ```
 
 ### 删除空文件夹的命令
