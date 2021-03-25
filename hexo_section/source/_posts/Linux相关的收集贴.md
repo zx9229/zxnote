@@ -85,6 +85,18 @@ yum remove 包名
 -v, --verbose              verbosely list files processed
 ```
 
+### 压缩和解压
+```
+tar --help | head -n 10  &&  tar --help | grep -E '\-z,|-j,|-J,'
+                             tar --help | grep -E '\-z,|-j,|-J,'
+tar -zcf a.tar.gz  filename1 filename2 filename3
+tar -jcf b.tar.bz2 filename1 filename2 filename3
+tar -Jcf c.tar.xz  filename1 filename2 filename3
+tar -xf a.tar.gz
+tar -xf b.tar.bz2
+tar -xf c.tar.xz
+```
+
 ### 过滤掉配置文件的注释项
 ```
 grep -Ev "(^[[:space:]]*$)|(^[[:space:]]*[;#])" smb.conf  # man POSIX

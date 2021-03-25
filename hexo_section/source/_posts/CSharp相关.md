@@ -21,3 +21,10 @@ omit
 然后，复制`Package Manager`的命令`Install-Package sqlSugar -Version 5.0.1.4`，  
 然后，`VS2013`>`TOOLS`>`NuGet Package Manager`>`Package Manager Console`，  
 然后，执行命令`Install-Package sqlSugar -Version 5.0.1.4`，  
+
+* C#中数字后面的M是什么意思?  
+[浮点数值类型 - C# 引用 | Microsoft Docs](https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)  
+真实文本的类型由其后缀确定，如下所示：  
+不带后缀的文本或带有`d`或`D`后缀的文本的类型为`double`  
+带有`f`或`F`后缀的文本的类型为`float`  
+带有`m`或`M`后缀的文本的类型为`decimal`  

@@ -103,3 +103,9 @@ rm 'temp.log'
 #
 [test@localhost ~]$
 ```
+
+### git查看有哪些作者提交了信息
+`git log | grep Author | sort | uniq`  
+
+### git查看指定作者提交的信息  
+`git log --author=作者1 --author='作者2' --author="作者3"`  

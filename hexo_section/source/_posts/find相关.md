@@ -39,6 +39,18 @@ find . \( -newer oldFile \) -and \( ! -newer newFile \)
 ```
 可以在man find的`OPERATORS`部分，找到`( expr )`,`! expr`,`-not`,`-a`,`-and`,`-o`,`-or`等运算符。  
 
+* find 的`-ctime`选项
+[linux的find命令--按时间查找文件](https://blog.csdn.net/ytmayer/article/details/6364739)
+```
+-ctime n
+       File’s status was last changed n*24 hours ago.
+       |----(+n)-----|--(n)--------------|-(-n)-------|
+       | ~ (n+1)*24H | (n+1)*24H ~ n*24H | n*24H ~ now|
+       -ctime +n    查找距现在 (n+1)*24H 前修改过的文件
+       -ctime  n    查找距现在 n*24H 前, (n+1)*24H 内修改过的文件
+       -ctime -n    查找距现在 n*24H 内修改过的文件
+```
+
 ## 查看mtime,atime,ctime的几种方式  
 
 ### 用ls查看  
@@ -63,3 +75,6 @@ Display file or file system status.
 
 ### 临时收集
 `find . -type f -name "*.o" -exec rm -f {} \;`
+
+* 找到最近7天内修改过的文件，并按修改时间顺序显示
+`find . -type f -ctime -7 | sed ':L;N;s/\n/ /;t L' | xargs ls -l -rt`

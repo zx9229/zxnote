@@ -19,6 +19,8 @@ NAME
 xargs 可以将管道或标准输入（stdin）数据转换成命令行参数，也能够从文件的输出中读取数据。  
 xargs 是一个强有力的命令，它能够捕获一个命令的输出，然后传递给另外一个命令。  
 
+[xargs 命令教程 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2019/08/xargs-tutorial.html)
+
 例如：  
 `find -type f -name '*.h' | xargs grep "hello"`  
 相当于，将find命令的结果取出来，对于每一条结果，作为grep的参数，执行一次grep命令。  

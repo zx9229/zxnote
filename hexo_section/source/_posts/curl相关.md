@@ -38,3 +38,6 @@ curl --insecure -T test.txt    sftp://用户:密码@主机:端口/
 curl --insecure -T test.txt    --key OpenSSHprivateKey sftp://用户@主机:端口/
 curl --insecure -T test.txt    --key OpenSSHprivateKey sftp://用户:@主机:端口/
 ```
+
+* 几个网页
+[curl 的用法指南 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2019/09/curl-reference.html)

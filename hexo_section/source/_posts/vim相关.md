@@ -78,3 +78,16 @@ Vim单独维护了一些参数。修改Linux的操作系统编码，一般来说
 查看帮助`:help :substitute`。  
 格式：`:[range]s[ubstitute]/{pattern}/{string}/[flags] [count]`。  
 例子：`:%s#pattern#string#g`或`:1,$s/pattern/string/g`。  
+
+#### vim删除当前行之前的所有行
+[https://www.linuxprobe.com/vim-delete-lines.html](vim编辑器如何删除一行或者多行内容 | 《Linux就该这么学》)  
+`:1,.-1d`并回车(vim删除当前行之前的所有行，不含当前行)。  
+解析：  
+`:3,5d`删除第3行至第5行(包含第3行和第5行)。  
+`:3,5-1d`删除第3行至第(5-1=4)行。  
+`:1,.d`删除第1行至第当前行(`.`代表当前行)。  
+`:1,.-1d`删除第1行至第当前行之前的一行(`.`代表当前行)。  
+其中(`.`代表当前行)的信息可以从`:help range`中查到。  
+
+#### vim删除当前行之后的所有行
+`:.+1,$d`并回车(vim删除当前行之后的所有行，不含当前行)。  
